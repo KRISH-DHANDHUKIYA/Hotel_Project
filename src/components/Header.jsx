@@ -1,47 +1,39 @@
-  const Header = () => {
-    return(
-        <>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
-    <div className="container-fluid ">
-      <a className="navbar-brand fs-3 font1" href="#">HOTEL TAJ</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav m-auto text-center mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link  active" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Rooms</a>
-        </li>
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Pages
-          </a>
-          <ul className="dropdown-menu border border-2 bg-dark dropdown-menu-dark ">
-            <li><a className="dropdown-item" href="#">About us</a></li>
-            <li><a className="dropdown-item" href="#">Offers</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Contact us</a></li>
-          </ul>
-        </li>
-         <li className="nav-item">
-          <a className="nav-link " aria-current="page" href="#">Events</a>
-         </li>
-          <li className="nav-item">
-          <a className="nav-link " aria-current="page" href="#">Blogs</a>
-          </li>
-      </ul>  
-  <div className="d-flex flex-column flex-lg-row gap-2">
-  <button className="btn btn-outline-light" type="submit">Log In</button>
-  <button className="btn btn-outline-light" type="submit">Sign Up</button>
-  </div>
-    </div>
-    </div>
-        </nav>
-        </>
-    )
-}
+import { useState } from 'react';
+import { Navbar, Nav, NavDropdown, Container, Button } from 'react-bootstrap';
 
-export default Header
+const Header = () => {
+  const [activeLink, setActiveLink] = useState('');
+
+  const handleSelect = (eventKey) => {
+    setActiveLink(eventKey);
+  };
+
+  return (
+    <Navbar bg="dark" variant="dark" expand="lg" className="py-3 shadow-sm">
+      <Container fluid>
+        <Navbar.Brand href="#" className="fs-4 font1">HOTEL TAJ</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarSupportedContent" />
+        <Navbar.Collapse id="navbarSupportedContent">
+          <Nav className="mx-auto text-center" activeKey={activeLink} onSelect={handleSelect}>
+            <Nav.Link eventKey="Home" href="#">Home</Nav.Link>
+            <Nav.Link eventKey="Rooms" href="#22">Rooms</Nav.Link>
+            <NavDropdown title="Pages" id="pages-dropdown" menuVariant="dark">
+              <NavDropdown.Item eventKey="About us" href="#">About us</NavDropdown.Item>
+              <NavDropdown.Item eventKey="Offers" href="#">Offers</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item eventKey="Contact us" href="#">Contact us</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link eventKey="Events" href="#">Events</Nav.Link>
+            <Nav.Link eventKey="Blogs" href="#">Blogs</Nav.Link>
+          </Nav>
+          <div className="d-flex flex-column flex-lg-row gap-2 mt-3 mt-lg-0">
+            <Button variant="outline-light">Log In</Button>
+            <Button variant="outline-light">Sign Up</Button>
+          </div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+};
+
+export default Header;
