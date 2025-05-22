@@ -2,13 +2,13 @@
     return(
         <>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
-  <div className="container-fluid ">
-    <a className="navbar-brand fs-3" href="#">HOTEL TAJ</a>
+    <div className="container-fluid ">
+      <a className="navbar-brand fs-3 font1" href="#">HOTEL TAJ</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav m-auto mb-2 mb-lg-0">
+      <ul className="navbar-nav m-auto text-center mb-2 mb-lg-0">
         <li className="nav-item">
           <a className="nav-link  active" aria-current="page" href="#">Home</a>
         </li>
@@ -27,20 +27,19 @@
           </ul>
         </li>
          <li className="nav-item">
-          <a className="nav-link " aria-current="page" href="#">Eventes</a>
-        </li>
+          <a className="nav-link " aria-current="page" href="#">Events</a>
+         </li>
           <li className="nav-item">
           <a className="nav-link " aria-current="page" href="#">Blogs</a>
-        </li>
+          </li>
       </ul>  
-         <div className="d-flex  ">
-  <button className="btn btn-outline-light" type="submit">Log in</button>
-  <button className="btn btn-outline-light mx-2" type="submit">Registration</button>
-</div>
-
-    </div>
+  <div className="d-flex flex-column flex-lg-row gap-2">
+  <button className="btn btn-outline-light" type="submit">Log In</button>
+  <button className="btn btn-outline-light" type="submit">Sign Up</button>
   </div>
-</nav>
+    </div>
+    </div>
+        </nav>
         </>
     )
 }
