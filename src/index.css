@@ -1,10 +1,29 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-   
 }
+
 .font1 {
     font-family: "Merriweather", serif;
     font-weight: bold;
+}
+
+.Navbar,
+.Footer {
+    background-color: black;
+    color: white;
+}
+
+.footer1 {
+    background-color: rgb(36, 33, 33);
+}
+
+.font2 {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.font3 {
+    font-family:'Times New Roman', Times, serif;
 }
