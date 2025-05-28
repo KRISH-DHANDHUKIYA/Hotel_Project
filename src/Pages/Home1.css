@@ -1,0 +1,63 @@
+.slide-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    padding: 1rem;
+    width: 90%;
+    max-width: 600px;
+}
+
+.slide-content h6 {
+    letter-spacing: 5px;
+}
+
+.slide-content span {
+    font-family: "Merriweather", serif;
+}
+
+@media (min-width: 768px) {
+    .slide-content span {
+        font-size: 3rem;
+    }
+
+    .slide-content h6 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slide-content span {
+        font-size: 4rem;
+    }
+
+    .slide-content h6 {
+        font-size: 1.5rem;
+    }
+}

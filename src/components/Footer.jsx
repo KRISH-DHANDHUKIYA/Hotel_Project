@@ -49,7 +49,7 @@ const Footer = () => {
         <hr className="w-100 clearfix d-md-none " />
 
         <div className="text-center p-4 w-100" >
-          © 2025 Copyright :<span className='fw-bold fs-6'> Hoteltaj.com </span>
+          © 2025 Copyright :<span className='fw-bold fs-6' > Hoteltaj.com </span>
         </div>
       </footer>
     </div>

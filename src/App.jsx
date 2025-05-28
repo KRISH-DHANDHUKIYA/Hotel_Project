@@ -7,6 +7,7 @@ import Gallery from "./Pages/Gallery"
 import Offers from "./Pages/Offers"
 import Admin from "./Pages/Admin"
 import Notpage from "./Pages/Notpage"
+import Login from "./models/login";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<Notpage />} />
+          <Route path="/login" element={<Login />} />
         </Route>
       </Routes>
     </>
