@@ -12,7 +12,8 @@ const Home = () => {
                     <div className="overlay" />
                     <div className="slide-content">
                         <h6 className="text-uppercase">Welcome to Taj Hotel</h6>
-                        <span className='fs-1 '>Redefining the Art of Luxury</span>
+                        <h4>Redefining the Art of Luxury</h4>
+                        <button className='text-uppercase btn1'>Show More</button>
                     </div>
                 </div>
             </div>
@@ -23,7 +24,8 @@ const Home = () => {
                     <div className="overlay" />
                     <div className="slide-content">
                         <h6 className="text-uppercase">Welcome to Taj Hotel</h6>
-                        <span className='fs-1 '>A Sanctuary for Dreams</span>
+                        <h4>A Sanctuary for Dreams</h4>
+                        <button className='text-uppercase btn1'>Show More</button>
                     </div>
                 </div>
             </div>
@@ -34,7 +36,8 @@ const Home = () => {
                     <div className="overlay" />
                     <div className="slide-content">
                         <h6 className="text-uppercase">Welcome to Taj Hotel</h6>
-                        <span className='fs-1 '>Capture the spirit of timeless</span>
+                        <h4>Capture the spirit of timeless</h4>
+                        <button className='text-uppercase btn1'>Show More</button>
                     </div>
                 </div>
             </div>
