@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Modal, Form } from 'react-bootstrap';
 
-const Sign = () => {
+const Signup = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -27,11 +27,11 @@ const Sign = () => {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>Sign-Up</Button>
+            <Button variant="primary" onClick={handleShow}>Signup-Up</Button>
 
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>
-                    <Modal.Title className="w-100 text-center">Sign-Up</Modal.Title>
+                    <Modal.Title className="w-100 text-center">Signup-Up</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={handleSubmit}>
@@ -61,7 +61,7 @@ const Sign = () => {
                         </Form.Group>
 
                         <div className="d-grid">
-                            <Button variant="primary" type="submit">Sign Up</Button>
+                            <Button variant="primary" type="submit">Signup Up</Button>
                         </div>
                     </Form>
                 </Modal.Body>
@@ -72,4 +72,4 @@ const Sign = () => {
         </>
     );
 };
-export default Sign;
+export default Signup;

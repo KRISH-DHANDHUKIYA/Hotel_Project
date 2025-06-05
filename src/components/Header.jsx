@@ -1,7 +1,7 @@
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Login from '../models/login';
-import  Signup  from "../models/signup"
+import Signup from "../models/signup"
 
 
 const Header = () => {
