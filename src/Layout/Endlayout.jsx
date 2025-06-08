@@ -3,11 +3,11 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 
 const Endlayout = () => {
-    return(
+    return (
         <>
-        <Header />
-        <Outlet />
-        <Footer />
+            <Header />
+            <Outlet />
+            <Footer />
         </>
     )
 }

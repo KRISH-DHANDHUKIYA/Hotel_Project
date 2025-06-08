@@ -27,11 +27,11 @@ const Signup = () => {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>Signup-Up</Button>
+            <Button variant="primary" onClick={handleShow}>Sign-Up</Button>
 
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>
-                    <Modal.Title className="w-100 text-center">Signup-Up</Modal.Title>
+                    <Modal.Title className="w-100 text-center">Sign-Up</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={handleSubmit}>
@@ -59,10 +59,9 @@ const Signup = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" name="password" placeholder="Enter the Password" value={formData.password} onChange={handleChange} />
                         </Form.Group>
-
-                        <div className="d-grid">
-                            <Button variant="primary" type="submit">Signup Up</Button>
-                        </div>
+                        <Button variant="outline-primary" type="submit" className="w-100">
+                            Sign Up
+                        </Button>
                     </Form>
                 </Modal.Body>
                 <Modal.Footer className="d-flex justify-content-center">

@@ -16,7 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/offers" element={<Offers />} />
-          <Route path="/gallery" element={<Gallery/>} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/contactus" element={<Contactus />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<Notpage />} />

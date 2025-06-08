@@ -1,12 +1,27 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .font1 {
     font-family: "Merriweather", serif;
     font-weight: bold;
+}
+
+.font2 {
+      font-family: "Open Sans", sans-serif;
+}
+
+.font3 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.logo1 {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    vertical-align: middle;
 }
 
 .Navbar,
@@ -19,11 +34,66 @@
     background-color: rgb(36, 33, 33);
 }
 
-.font2 {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
+.btn-floating i {
+    font-size: 1.1rem;
 }
 
-.font3 {
-    font-family: 'Times New Roman', Times, serif;
+.auth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (min-width: 992px) {
+    .auth-buttons {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo1 {
+        height: 32px;
+        width: 32px;
+    }
+
+    .Footer {
+        padding: 1rem !important;
+    }
+
+    .Footer .btn-floating {
+        padding: 0.25rem 0.5rem;
+    }
+
+    .Footer .text-center {
+        font-size: 0.9rem;
+    }
+
+    .Footer p,
+    .Footer h6 {
+        text-align: center;
+    }
+
+    .Footer form {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .btn-floating i {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 577px) {
+    .Footer form {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .Footer p,
+    .Footer h6 {
+        text-align: center;
+    }
 }

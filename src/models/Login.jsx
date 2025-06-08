@@ -65,7 +65,7 @@ const Login = () => {
                         </Form.Group>
 
                         <div className="d-grid">
-                            <Button variant="primary" type="submit">
+                            <Button variant="primary" type="submit" className="w-100">
                                 Log In
                             </Button>
                         </div>
