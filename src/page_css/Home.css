@@ -47,7 +47,6 @@
     font-size: 0.75rem;
 }
 
-/* Small screens */
 @media (min-width: 576px) {
     .font5 {
         font-size: 0.85rem;
@@ -55,7 +54,6 @@
     }
 }
 
-/* Medium screens */
 @media (min-width: 768px) {
     .font5 {
         font-size: 0.95rem;
@@ -63,7 +61,6 @@
     }
 }
 
-/* Large screens */
 @media (min-width: 992px) {
     .font5 {
         font-size: 1.05rem;
@@ -71,15 +68,12 @@
     }
 }
 
-/* Extra-large screens */
 @media (min-width: 1200px) {
     .font5 {
         font-size: 1.15rem;
         letter-spacing: 7px;
     }
 }
-
-
 
 .btn5 {
     font-family: "Merriweather", serif;
@@ -141,4 +135,91 @@
 .text-center-full {
     width: 100%;
     text-align: center;
+}
+
+.icon1 {
+    background-color: #c19b76;
+    color: white;
+    padding: 15px;
+    font-size: 1.3rem;
+    opacity: 50%;
+    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 2s;
+    position: relative;
+    bottom: 51px;
+}
+
+.icon1:hover {
+    opacity: 100%;
+}
+
+.text1 {
+    color: #c19b76;
+    letter-spacing: 3px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.text2 {
+    font-size: 3.25rem;
+    font-family: "Playfair Display", serif;
+}
+
+.text3 {
+    font-family: "Open Sans", sans-serif;
+}
+
+.hover15 figure {
+    position: relative;
+}
+
+.hover15 figure::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.hover15 figure:hover::before {
+    -webkit-animation: circle .75s;
+    animation: circle .75s;
+}
+
+@-webkit-keyframes circle {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+
+@keyframes circle {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
 }

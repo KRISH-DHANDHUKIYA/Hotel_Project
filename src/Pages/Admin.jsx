@@ -1,7 +1,7 @@
 const Admin = () => {
     return(
         <>
-        <h1>Admin</h1>
+        <h1 className="page-content">Admin</h1>
         </>
     )
 }

@@ -10,7 +10,7 @@
 }
 
 .font2 {
-      font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .font3 {
@@ -24,10 +24,8 @@
     vertical-align: middle;
 }
 
-.Navbar,
-.Footer {
-    background-color: black;
-    color: white;
+.Navbar {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .footer1 {
@@ -96,4 +94,7 @@
     .Footer h6 {
         text-align: center;
     }
+}
+.page-content {
+  padding-top: 90px; /* Prevents header overlap */
 }

@@ -2,7 +2,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import '../page_css/Home.css'
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 const Home1 = () => {
     return (
@@ -48,17 +48,28 @@ const Home1 = () => {
                 </div>
             </OwlCarousel>
 
-            <Container fluid>
-                <Row>
-                    <Col><label>Arrival Date</label></Col>
-                    <Col><label>Departure Date</label></Col>
-                    <Col><label>Adults</label></Col>
-                    <Col><label>Children</label></Col>
-                    <Col>
-                        <button className='text-uppercase btn1' style={{ padding: "28px" }}>Check Availability</button>
+            <Container fluid className="my-3">
+                <Row className="g-3 align-items-center text-center">
+                    <Col xs={12} sm={6} md={3}>
+                        <div>Arrival Date</div>
+                    </Col>
+                    <Col xs={12} sm={6} md={3}>
+                        <div>Departure Date</div>
+                    </Col>
+                    <Col xs={6} sm={6} md={2}>
+                        <div>Adults</div>
+                    </Col>
+                    <Col xs={6} sm={6} md={2}>
+                        <div>Children</div>
+                    </Col>
+                    <Col xs={12} md={2}>
+                        <Button className="text-uppercase btn1 w-100 py-2">
+                            Check Availability
+                        </Button>
                     </Col>
                 </Row>
             </Container>
+
         </>
     );
 };
