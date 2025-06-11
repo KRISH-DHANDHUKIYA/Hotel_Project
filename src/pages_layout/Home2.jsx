@@ -2,9 +2,9 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 
 const Home2 = () => {
     return (
-        <Container fluid className="py-5 px-3" style={{ backgroundColor: "#f8f8f8" }}>
-            <Row className="align-items-center">
-                <Col xs={12} lg={6} className="mb-4 mb-lg-0">
+        <Container fluid className="simg">
+            <Row className="align-items-center ">
+                <Col xs={12} lg={6} className="mb-4 mb-lg-0 ">
                     <h6 className="text-uppercase text1">Welcome To Hotel Taj</h6>
                     <h2 className="mb-3 text2">A New Vision of Luxury</h2>
                     <p className="text3 fw-semibold mb-3">
@@ -27,7 +27,7 @@ const Home2 = () => {
                             src="https://velikorodnov.com/html/milenia/images/single-gallery-image-1.jpg"
                             alt="Hotel Room"
                             fluid
-                        /> 
+                        />
                     </div>
                 </Col>
             </Row>
