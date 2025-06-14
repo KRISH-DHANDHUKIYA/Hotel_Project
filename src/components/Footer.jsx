@@ -83,12 +83,14 @@ const Footer = () => {
         </Container>
 
         <hr className="text-white opacity-50" />
+
         <div className="text-center p-3 mt-2 text-white">
           © 2025 Copyright:
-          <span className="fw-bold ms-1">
+          <span className="fw-bold">
             <Link to="/" className="text-white text-decoration-none">Hoteltaj.com</Link>
           </span>
         </div>
+        
       </footer>
     </div>
   );

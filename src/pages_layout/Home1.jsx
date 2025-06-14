@@ -2,9 +2,38 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import '../page_css/Home.css'
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { useState } from 'react';
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 const Home1 = () => {
+
+    const [formData, setFormData] = useState({
+        destination: "",
+        arrivalDate: "",
+        departureDate: "",
+        guests: "",
+    });
+
+    const [validated, setValidated] = useState(false);
+
+    const handleChange = (e) => {
+        const { id, value } = e.target;
+        setFormData((prev) => ({ ...prev, [id]: value }));
+    };
+
+    const handleSubmit = (e) => {
+        const form = e.currentTarget;
+        e.preventDefault();
+
+        if (form.checkValidity() === false) {
+            e.stopPropagation();
+        }
+        else {
+            console.log("Form Submitted:", formData);
+        }
+        setValidated(true);
+    };
+
     return (
         <>
             <OwlCarousel className="owl-theme" nav={false} dots={false} responsiveClass={true} items={1} autoplay loop margin={0} autoplayTimeout={3000} responsive={{ 0: { items: 1 }, 600: { items: 1, }, 1000: { items: 1, }, }}>
@@ -48,28 +77,64 @@ const Home1 = () => {
                 </div>
             </OwlCarousel>
 
-            <Container fluid className="my-3">
-                <Row className="g-3 align-items-center text-center">
-                    <Col xs={12} sm={6} md={3}>
-                        <div>Arrival Date</div>
-                    </Col>
-                    <Col xs={12} sm={6} md={3}>
-                        <div>Departure Date</div>
-                    </Col>
-                    <Col xs={6} sm={6} md={2}>
-                        <div>Adults</div>
-                    </Col>
-                    <Col xs={6} sm={6} md={2}>
-                        <div>Children</div>
-                    </Col>
-                    <Col xs={12} md={2}>
-                        <Button className="text-uppercase btn1 w-100 py-2">
-                            Check Availability
-                        </Button>
-                    </Col>
-                </Row>
-            </Container>
+            <section className="py-5 my-5" style={{ backgroundColor: "#faf5ef" }}>
+                <Container>
+                    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                        <Row className="gy-4 gx-3">
+                            <Col xs={12} sm={6} md={3}>
+                                <Form.Group controlId="destination">
+                                    <Form.Label className="fw-bold">Destination</Form.Label>
+                                    <Form.Select value={formData.destination} onChange={handleChange} required>
+                                        <option value="">Open this select menu</option>
+                                        <option value="Dubai">Dubai</option>
+                                        <option value="Singapore">Singapore</option>
+                                        <option value="New York">New York</option>
+                                        <option value="London">London</option>
+                                    </Form.Select>
+                                    <Form.Control.Feedback type="invalid">Please select a destination.</Form.Control.Feedback>
+                                </Form.Group>
+                            </Col>
 
+                            <Col xs={12} sm={6} md={3}>
+                                <Form.Group controlId="arrivalDate">
+                                    <Form.Label className="fw-bold">Arrival Date</Form.Label>
+                                    <Form.Control type="date" value={formData.arrivalDate} onChange={handleChange} required />
+                                    <Form.Control.Feedback type="invalid">Please choose an arrival date.</Form.Control.Feedback>
+                                </Form.Group>
+                            </Col>
+
+                            <Col xs={12} sm={6} md={3}>
+                                <Form.Group controlId="departureDate">
+                                    <Form.Label className="fw-bold">Departure Date</Form.Label>
+                                    <Form.Control type="date" value={formData.departureDate} onChange={handleChange} required />
+                                    <Form.Control.Feedback type="invalid">Please choose a departure date.</Form.Control.Feedback>
+                                </Form.Group>
+                            </Col>
+
+                            <Col xs={12} sm={6} md={2}>
+                                <Form.Group controlId="guests">
+                                    <Form.Label className="fw-bold">Guests</Form.Label>
+                                    <Form.Select value={formData.guests} onChange={handleChange} required>
+                                        <option value="">Select</option>
+                                        {[1, 2, 3, 4, 5, 6].map((num) => (
+                                            <option key={num} value={num}>
+                                                {num}
+                                            </option>
+                                        ))}
+                                    </Form.Select>
+                                    <Form.Control.Feedback type="invalid">Please select number of guests.</Form.Control.Feedback>
+                                </Form.Group>
+                            </Col>
+
+                            <Col xs={12} sm={6} md={1} className="d-grid align-self-end">
+                                <Button type="submit" style={{ backgroundColor: "#c5915e", border: "none" }} className="fw-bold">
+                                    Search
+                                </Button>
+                            </Col>
+                        </Row>
+                    </Form>
+                </Container>
+            </section>
         </>
     );
 };
