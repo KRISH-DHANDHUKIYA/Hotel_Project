@@ -251,3 +251,8 @@
     font-size: 1rem;
     line-height: 1.5;
 }
+
+.col1 {
+    background-color: oklch(98.4% .003 247.858);
+    padding: 0px 0px;
+}

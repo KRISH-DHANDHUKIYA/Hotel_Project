@@ -39,9 +39,8 @@ const Header = () => {
             <Nav className="mx-auto text-center flex-row font2">
               <Link to="/" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>Home</Link>
               <Link to="/aboutus" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>About Us</Link>
-              <Link to="/offers" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>Offers</Link>
-              <Link to="/gallery" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>Gallery</Link>
-              <Link to="/contactus" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>Contact Us</Link>
+              <Link to="/room" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>Room</Link>
+              <Link to="/blog" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>Blog</Link>
             </Nav>
 
             <div className="auth-buttons mt-3 mt-lg-0">
@@ -62,9 +61,8 @@ const Header = () => {
           <Nav className="flex-column text-center font2">
             <Link to="/" onClick={handleClose} className="text-light text-decoration-none py-2">Home</Link>
             <Link to="/aboutus" onClick={handleClose} className="text-light text-decoration-none py-2">About Us</Link>
-            <Link to="/offers" onClick={handleClose} className="text-light text-decoration-none py-2">Offers</Link>
-            <Link to="/gallery" onClick={handleClose} className="text-light text-decoration-none py-2">Gallery</Link>
-            <Link to="/contactus" onClick={handleClose} className="text-light text-decoration-none py-2">Contact Us</Link>
+            <Link to="/room" onClick={handleClose} className="text-light text-decoration-none py-2">Room</Link>
+            <Link to="/blog" onClick={handleClose} className="text-light text-decoration-none py-2">Blog</Link>
           </Nav>
           <div className="auth-buttons mt-3 text-center">
             <FontAwesomeIcon icon={faMagnifyingGlass} className='text-light m-2' style={{ cursor: "pointer" }} />

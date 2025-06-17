@@ -22,16 +22,16 @@ const Home1 = () => {
     };
 
     const handleSubmit = (e) => {
+        e.preventDefault()
         const form = e.currentTarget;
-        e.preventDefault();
+
+        setValidated(true);
 
         if (form.checkValidity() === false) {
             e.stopPropagation();
+            return
         }
-        else {
-            console.log("Form Submitted:", formData);
-        }
-        setValidated(true);
+        console.log(formData);
     };
 
     return (
@@ -79,7 +79,7 @@ const Home1 = () => {
 
             <section className="py-5 my-5" style={{ backgroundColor: "#faf5ef" }}>
                 <Container>
-                    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                    <Form noValidate validated={validated} onSubmit={handleSubmit} autoComplete="off">
                         <Row className="gy-4 gx-3">
                             <Col xs={12} sm={6} md={3}>
                                 <Form.Group controlId="destination">

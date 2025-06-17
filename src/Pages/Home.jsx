@@ -5,9 +5,9 @@ import Reviewes from "../pages_layout/Reviewes"
 const Home = () => {
     return (
         <>
-        <Home1 />
-        <Featurdes />
-        <Reviewes />
+            <Home1 />
+            <Featurdes />
+            <Reviewes />
         </>
     );
 };

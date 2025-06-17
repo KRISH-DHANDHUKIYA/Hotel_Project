@@ -1,34 +1,40 @@
 import { Container, Row, Col, Card, Image } from 'react-bootstrap';
+import { assets } from '../assets/assets'
 
 const Reviewes = () => {
   return (
-    <Container className="my-5">
+    <Container fluid className="my-5 col1 d-flex flex-column align-items-center justify-content-center">
+      <div className="text-center d-flex flex-column align-items-center justify-content-center mb-5">
+        <h1 className="fw-bold font1" style={{ fontFamily: 'Playfair Display, serif', fontSize: '2.5rem' }}>
+          What Our Guests Say
+        </h1>
+        <p className="text-muted mt-2 font2" style={{ maxWidth: '700px', fontSize: '1rem' }}>
+          Discover why discerning travelers consistently choose QuickStay for their exclusive and luxurious accommodations around the world.
+        </p>
+      </div>
       <Row className="justify-content-center g-4">
         <Col xs={12} md={6} lg={4} className="d-flex justify-content-center">
           <Card className="text-center p-4 border border-secondary-subtle rounded-lg shadow-sm" style={{ width: '18rem' }}>
             <div className="d-flex justify-content-center mb-3">
               <Image
-                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200"
+                src="https://avatars.mds.yandex.net/i?id=709c594cad8f14e76a45c7dd6f927a13eadc12f5-3908415-images-thumbs&n=13"
                 alt="Donald Jackman"
                 roundedCircle
                 style={{ width: '80px', height: '80px', objectFit: 'cover' }}
               />
             </div>
             <Card.Title className="text-lg text-gray-900 fw-medium mb-1">
-              Donald Jackman
+              Suyash Sharma
             </Card.Title>
-            <Card.Subtitle className="mb-2 text-muted text-sm">
-              Graphic Designer
-            </Card.Subtitle>
             <div className="d-flex justify-content-center mt-3 gap-1">
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
+              <img src={assets.starIconFilled} alt="star1" />
+              <img src={assets.starIconFilled} alt="star" />
+              <img src={assets.starIconFilled} alt="star" />
+              <img src={assets.starIconFilled} alt="star" />
+              <img src={assets.starIconFilled} alt="star" />
             </div>
             <Card.Text className="text-center mt-3 text-gray-500" style={{ fontSize: '15px' }}>
-              I've been using imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.
+              The exceptional customer service at this hotel impressed me. They were always friendly and asked how our stay was going every time we walked in the door. They were also able to recommend places to get any meal that we needed.
             </Card.Text>
           </Card>
         </Col>
@@ -37,27 +43,24 @@ const Reviewes = () => {
           <Card className="text-center p-4 border border-secondary-subtle rounded-lg shadow-sm" style={{ width: '18rem' }}>
             <div className="d-flex justify-content-center mb-3">
               <Image
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200"
+                src="https://avatars.mds.yandex.net/i?id=7639312ee343715e79c0fca18b205774411eabcd-5247757-images-thumbs&n=13"
                 alt="Richard Nelson"
                 roundedCircle
                 style={{ width: '80px', height: '80px', objectFit: 'cover' }}
               />
             </div>
             <Card.Title className="text-lg text-gray-900 fw-medium mb-1">
-              Richard Nelson
+              Tim David
             </Card.Title>
-            <Card.Subtitle className="mb-2 text-muted text-sm">
-              Content Creator
-            </Card.Subtitle>
             <div className="d-flex justify-content-center mt-3 gap-1">
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
+              <img src={assets.starIconFilled} alt="star" />
+              <img src={assets.starIconFilled} alt="star" />
+              <img src={assets.starIconFilled} alt="star" />
+              <img src={assets.starIconFilled} alt="star" />
+              <img src={assets.starIconOutlined} alt="star2" />
             </div>
             <Card.Text className="text-center mt-3 text-gray-500" style={{ fontSize: '15px' }}>
-              I've been using imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.
+              The hotel was beautiful, with clean and comfortable rooms. It was even better than expected. The price was terrific. There were great restaurants within walking distance. I would definitely stay there again.
             </Card.Text>
           </Card>
         </Col>
@@ -66,27 +69,24 @@ const Reviewes = () => {
           <Card className="text-center p-4 border border-secondary-subtle rounded-lg shadow-sm" style={{ width: '18rem' }}>
             <div className="d-flex justify-content-center mb-3">
               <Image
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop"
+                src="https://diccut.com/upload/photos/2024/10/NRefIhbwhuVskAymDlrW_09_c7d1067df7b17a97c8b882e2772c1e47_avatar_full.jpg"
                 alt="James Washington"
                 roundedCircle
                 style={{ width: '80px', height: '80px', objectFit: 'cover' }}
               />
             </div>
             <Card.Title className="text-lg text-gray-900 fw-medium mb-1">
-              James Washington
+              Samar Joshef
             </Card.Title>
-            <Card.Subtitle className="mb-2 text-muted text-sm">
-              Co-founder
-            </Card.Subtitle>
             <div className="d-flex justify-content-center mt-3 gap-1">
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="#FF532E" xmlns="http://www.w3.org/2000/svg"><path d="M7.524.464a.5.5 0 0 1 .952 0l1.432 4.41a.5.5 0 0 0 .476.345h4.637a.5.5 0 0 1 .294.904L11.563 8.85a.5.5 0 0 0-.181.559l1.433 4.41a.5.5 0 0 1-.77.559L8.294 11.65a.5.5 0 0 0-.588 0l-3.751 2.726a.5.5 0 0 1-.77-.56l1.433-4.41a.5.5 0 0 0-.181-.558L.685 6.123A.5.5 0 0 1 .98 5.22h4.637a.5.5 0 0 0 .476-.346z" /></svg>
+              <img src={assets.starIconFilled} alt="star" />
+              <img src={assets.starIconFilled} alt="star" />
+              <img src={assets.starIconFilled} alt="star" />
+              <img src={assets.starIconFilled} alt="star" />
+              <img src={assets.starIconOutlined} alt="star2" />
             </div>
             <Card.Text className="text-center mt-3 text-gray-500" style={{ fontSize: '15px' }}>
-              I've been using imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.
+              I recently stayed at Hotel Taj and it was one of the best hotel experiences I've ever had. The Room was spacious and comfortable, and the amenities were top-notch, with helpful and friendly staff.
             </Card.Text>
           </Card>
         </Col>
