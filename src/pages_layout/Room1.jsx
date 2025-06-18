@@ -83,7 +83,7 @@ const Room1 = () => {
                                     <img src={assets.starIconFilled} alt="filled star" />
                                     <img src={assets.starIconFilled} alt="filled star" />
                                     <img src={assets.starIconFilled} alt="filled star" />
-                                    <p className="ms-2 mb-0">500+ Reviews</p>
+                                    <p className="ms-2 mb-0">200+ Reviews</p>
                                 </div>
 
                                 <div className="d-flex align-items-center gap-1 mt-2 fs-6" style={{ color: '#6B7280' }}>

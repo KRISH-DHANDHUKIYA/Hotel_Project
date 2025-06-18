@@ -77,7 +77,7 @@ const Home1 = () => {
                 </div>
             </OwlCarousel>
 
-            <section className="py-5 my-5" style={{ backgroundColor: "#faf5ef" }}>
+            <section className="py-5 my-5 bg-dark text-light" >
                 <Container>
                     <Form noValidate validated={validated} onSubmit={handleSubmit} autoComplete="off">
                         <Row className="gy-4 gx-3">
