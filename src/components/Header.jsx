@@ -41,6 +41,7 @@ const Header = () => {
               <Link to="/aboutus" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>About Us</Link>
               <Link to="/room" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>Room</Link>
               <Link to="/facility" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>Facility</Link>
+              <Link to="/mybooking" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>My Booking</Link>
             </Nav>
 
             <div className="auth-buttons mt-3 mt-lg-0">
@@ -63,6 +64,7 @@ const Header = () => {
             <Link to="/aboutus" onClick={handleClose} className="text-light text-decoration-none py-2">About Us</Link>
             <Link to="/room" onClick={handleClose} className="text-light text-decoration-none py-2">Room</Link>
             <Link to="/facility" onClick={handleClose} className="text-light text-decoration-none py-2">Facility</Link>
+            <Link to="/mybooking" onClick={handleClose} className="text-light text-decoration-none py-2">My Booking</Link>
           </Nav>
           <div className="auth-buttons mt-3 text-center">
             <FontAwesomeIcon icon={faMagnifyingGlass} className='text-light m-2' style={{ cursor: "pointer" }} />

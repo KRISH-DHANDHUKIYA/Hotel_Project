@@ -59,9 +59,8 @@ const Footer = () => {
                 <h6 className="mb-4 fw-bold fs-5 font1 text-center text-lg-start">Quick Links</h6>
                 <Link to="/" className="text-white text-decoration-none d-block mb-2 font2">Home</Link>
                 <Link to="/aboutus" className="text-white text-decoration-none d-block mb-2 font2">About Us</Link>
-                <Link to="/offers" className="text-white text-decoration-none d-block mb-2 font2">Offers</Link>
-                <Link to="/gallery" className="text-white text-decoration-none d-block mb-2 font2">Gallery</Link>
-                <Link to="/contactus" className="text-white text-decoration-none d-block mb-2 font2">Contact Us</Link>
+                <Link to="/room" className="text-white text-decoration-none d-block mb-2 font2">Room</Link>
+                <Link to="/facility" className="text-white text-decoration-none d-block mb-2 font2">Facility</Link>
               </Col>
 
               <Col xs={12} sm={6} md={6} lg={4} className="mt-3">
@@ -90,7 +89,7 @@ const Footer = () => {
             <Link to="/" className="text-white text-decoration-none">Hoteltaj.com</Link>
           </span>
         </div>
-        
+
       </footer>
     </div>
   );

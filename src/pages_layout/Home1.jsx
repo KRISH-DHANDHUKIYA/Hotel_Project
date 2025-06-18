@@ -4,6 +4,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import '../page_css/Home.css'
 import { useState } from 'react';
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { assets, cities } from "../assets/assets"
 
 const Home1 = () => {
 
@@ -77,7 +78,7 @@ const Home1 = () => {
                 </div>
             </OwlCarousel>
 
-            <section className="py-5 my-5 bg-dark text-light" >
+            <section className="py-5 my-5 bg-dark" >
                 <Container>
                     <Form noValidate validated={validated} onSubmit={handleSubmit} autoComplete="off">
                         <Row className="gy-4 gx-3">
@@ -135,6 +136,83 @@ const Home1 = () => {
                     </Form>
                 </Container>
             </section>
+
+
+            {/* <section className="py-5 my-5 bg-dark">
+                <Container>
+                    <div className="d-flex justify-content-center">
+                        <Form className="bg-white text-muted rounded px-4 py-4 mt-4 w-100" style={{ maxWidth: '900px' }}>
+                            <Row className="gy-3 gx-3 align-items-end">
+                                <Col xs={12} md>
+                                    <Form.Group controlId="destinationInput">
+                                        <Form.Label className="d-flex align-items-center gap-2 mb-1">
+                                            <img src={assets.calenderIcon} alt="calendar" style={{ height: '1rem' }} />
+                                            Destination
+                                        </Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            list="destinations"
+                                            placeholder="Type here"
+                                            required
+                                        />
+                                        <datalist id="destinations">
+                                            {cities.map((city, index) => (
+                                                <option value={city} key={index} />
+                                            ))}
+                                        </datalist>
+                                    </Form.Group>
+                                </Col>
+
+                                <Col xs={12} sm={6} md>
+                                    <Form.Group controlId="checkIn">
+                                        <Form.Label className="d-flex align-items-center gap-2 mb-1">
+                                            <img src={assets.calenderIcon} alt="calendar" style={{ height: '1rem' }} />
+                                            Check in
+                                        </Form.Label>
+                                        <Form.Control type="date" />
+                                    </Form.Group>
+                                </Col>
+
+                                <Col xs={12} sm={6} md>
+                                    <Form.Group controlId="checkOut">
+                                        <Form.Label className="d-flex align-items-center gap-2 mb-1">
+                                            <img src={assets.calenderIcon} alt="calendar" style={{ height: '1rem' }} />
+                                            Check out
+                                        </Form.Label>
+                                        <Form.Control type="date" />
+                                    </Form.Group>
+                                </Col>
+
+                                <Col xs={6} md="auto">
+                                    <Form.Group controlId="guests">
+                                        <Form.Label>Guests</Form.Label>
+                                        <Form.Control
+                                            type="number"
+                                            min={1}
+                                            max={4}
+                                            placeholder="0"
+                                            style={{ maxWidth: '64px' }}
+                                        />
+                                    </Form.Group>
+                                </Col>
+
+                                <Col xs={12} md="auto">
+                                    <Button
+                                        type="submit"
+                                        className="d-flex align-items-center justify-content-center gap-2 bg-dark text-white border-0 w-100 w-md-auto px-4 py-2"
+                                    >
+                                        <img src={assets.searchIcon} alt="search" style={{ height: '1rem' }} />
+                                        <span>Search</span>
+                                    </Button>
+                                </Col>
+                            </Row>
+                        </Form>
+                    </div>
+                </Container>
+            </section> */}
+
+
+
         </>
     );
 };
