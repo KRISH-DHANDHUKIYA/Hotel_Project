@@ -61,7 +61,7 @@ const Room1 = () => {
 
                     {roomsDummyData.map((room) => (
                         <div key={room._id} className="mb-5 d-flex flex-column flex-md-row align-items-start border-bottom border-secondary" style={{ paddingTop: '2.5rem', paddingBottom: '2.5rem', gap: '1.5rem' }}>
-                            <Link to={`/rooms/${room._id}`} onClick={() => scrollTo(0, 0)}>
+                            <Link to={`/room/${room._id}`} onClick={() => scrollTo(0, 0)}>
                                 <img src={room.images[0]} alt="h-img" title="View Room Details" className="w-100 rounded-4 shadow-lg"
                                     style={{
                                         maxHeight: '260px', objectFit: 'cover', cursor: 'pointer', width: '100%', maxWidth: '100%',
@@ -71,7 +71,7 @@ const Room1 = () => {
                             <div className="d-flex flex-column gap-2 mt-3">
                                 <p className="text-muted">{room.hotel.city}</p>
 
-                                <Link to={`/rooms/${room._id}`} onClick={() => scrollTo(0, 0)} style={{ textDecoration: 'none' }}>
+                                <Link to={`/room/${room._id}`} onClick={() => scrollTo(0, 0)} style={{ textDecoration: 'none' }}>
                                     <p style={{ color: '#1F2937', fontSize: '30px', cursor: 'pointer' }} className="font1">
                                         {room.hotel.name}
                                     </p>

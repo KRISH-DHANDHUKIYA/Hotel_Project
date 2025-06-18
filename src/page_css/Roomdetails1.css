@@ -1,0 +1,29 @@
+.details1 {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .details1 {
+    padding-top: 8.75rem;
+    padding-bottom: 8.75rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .details1 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .details1 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
