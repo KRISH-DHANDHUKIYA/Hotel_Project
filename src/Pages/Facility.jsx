@@ -1,6 +1,6 @@
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
-const Blog = () => {
+const Facility = () => {
     return (
         <div className="page-content1">
             <Container>
@@ -73,4 +73,4 @@ const Blog = () => {
     );
 };
 
-export default Blog;
+export default Facility

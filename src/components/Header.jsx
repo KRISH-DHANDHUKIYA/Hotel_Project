@@ -28,7 +28,7 @@ const Header = () => {
         <Container>
           <Navbar.Brand className="fs-4 font1 d-flex align-items-center" style={{ cursor: "pointer" }}>
             <Link to="/" className="d-flex align-items-center text-decoration-none" style={{ color: isScrolled ? "black" : "white" }}>
-              <Image src="https://logodix.com/logo/92368.png" roundedCircle className="logo1 me-2"/>
+              <Image src="https://logodix.com/logo/92368.png" roundedCircle className="logo1 me-2" />
               HOTEL TAJ
             </Link>
           </Navbar.Brand>
@@ -40,7 +40,7 @@ const Header = () => {
               <Link to="/" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>Home</Link>
               <Link to="/aboutus" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>About Us</Link>
               <Link to="/room" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>Room</Link>
-              <Link to="/blog" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>Blog</Link>
+              <Link to="/facility" className={`text-decoration-none px-3 py-2 ${isScrolled ? 'text-dark' : 'text-light'}`}>Facility</Link>
             </Nav>
 
             <div className="auth-buttons mt-3 mt-lg-0">
@@ -62,7 +62,7 @@ const Header = () => {
             <Link to="/" onClick={handleClose} className="text-light text-decoration-none py-2">Home</Link>
             <Link to="/aboutus" onClick={handleClose} className="text-light text-decoration-none py-2">About Us</Link>
             <Link to="/room" onClick={handleClose} className="text-light text-decoration-none py-2">Room</Link>
-            <Link to="/blog" onClick={handleClose} className="text-light text-decoration-none py-2">Blog</Link>
+            <Link to="/facility" onClick={handleClose} className="text-light text-decoration-none py-2">Facility</Link>
           </Nav>
           <div className="auth-buttons mt-3 text-center">
             <FontAwesomeIcon icon={faMagnifyingGlass} className='text-light m-2' style={{ cursor: "pointer" }} />

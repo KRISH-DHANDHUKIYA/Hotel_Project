@@ -74,7 +74,7 @@ const NewsEvents = () => {
                                 <h5 className="fw-semibold mb-1">Ticha Soni</h5>
                                 <p className="text-muted mb-2 ">Guest Experience Manager</p>
                                 <div>
-                                   <a href="https://www.facebook.com/" className="text-primary me-3"><FaFacebook /></a>
+                                    <a href="https://www.facebook.com/" className="text-primary me-3"><FaFacebook /></a>
                                     <a href="https://www.instagram.com/" className="text-danger me-3"><FaInstagram /></a>
                                     <a href="https://x.com/" className="text-info me-3"><FaTwitter /></a>
                                     <a href="https://www.linkedin.com/" className="text-primary me-3"><FaLinkedin /></a>
@@ -95,7 +95,7 @@ const NewsEvents = () => {
                                 <h5 className="fw-semibold mb-1">Ravi Arana</h5>
                                 <p className="text-muted mb-2">Hotel Manager</p>
                                 <div>
-                                   <a href="https://www.facebook.com/" className="text-primary me-3"><FaFacebook /></a>
+                                    <a href="https://www.facebook.com/" className="text-primary me-3"><FaFacebook /></a>
                                     <a href="https://www.instagram.com/" className="text-danger me-3"><FaInstagram /></a>
                                     <a href="https://x.com/" className="text-info me-3"><FaTwitter /></a>
                                     <a href="https://www.linkedin.com/" className="text-primary me-3"><FaLinkedin /></a>

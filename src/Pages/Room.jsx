@@ -1,7 +1,9 @@
+import Room1 from "../pages_layout/Room1"
+
 const Room = () => {
     return (
         <>
-            <h1 className="page-content">Room-1</h1>
+           <Room1 />
         </>
     )
 }
