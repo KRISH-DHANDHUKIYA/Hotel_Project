@@ -1,61 +1,86 @@
-// const MyBooking = () => {
-//     return (
-//         <>
-//             <div className="py-28 md:pb-35 md:pt-32 px-4 md:px-16 lg:px-24 xl:px-32">
-//                 <Title title="My Bookings" subTitle='Easily manage your past, current and uplcoming hotel reservations in one place. Plan your trips for seamlessally with just a few clickes' align="left" />
-
-
-//                 <div className="max-w-6xl mt-8 w-full text-grey-800">
-
-//                     <div className="hidden md:grid md:grid-cols-[3fr_2fr_1fr] w-full border-b border-grey-300 font-medium text-base py-3">
-//                         <div className="w-1/3">Hotels</div>
-//                         <div className="w-1/3">Date & Timings</div>
-//                         <div className="w-1/3">Payment</div>
-//                     </div>
-
-//                 </div>
-//             </div>
-//         </>
-//     )
-// }
-
-// export default MyBooking
-
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import { assets, userBookingsDummyData } from "../assets/assets";
+import { useState } from "react";
 
 const MyBooking = () => {
+
+    const [bookings, setBookings] = useState(userBookingsDummyData);
+
     return (
         <div className="pt-5 pb-5" style={{ backgroundColor: "#f9f9f9" }}>
-            <Container fluid="lg" className="px-4 px-md-5 px-lg-6 px-xl-7" style={{ paddingTop: "7rem" }}>
-                <div className="d-flex flex-column align-items-start text-start mb-4">
+            <Container fluid="lg" className="px-3 px-md-4 px-lg-5" style={{ paddingTop: "7rem" }}>
+                <div className="mb-4">
                     <h1 className="fw-bold">My Bookings</h1>
-                    <p
-                        className="fs-6 mt-2"
-                        style={{
-                            color: "rgba(107, 114, 128, 0.9)",
-                            maxWidth: "720px",
-                        }}
-                    >
+                    <p className="fs-6 mt-2 text-secondary" style={{ maxWidth: "720px" }}>
                         Easily manage your past, current, and upcoming hotel reservations in one place. Plan your trips seamlessly with just a few clicks.
                     </p>
                 </div>
 
+                {/* Table Headers for md and up */}
                 <Row className="border-bottom border-secondary-subtle py-3 fw-medium d-none d-md-flex">
                     <Col md={6}>Hotels</Col>
                     <Col md={4}>Date & Timings</Col>
                     <Col md={2}>Payment</Col>
                 </Row>
 
-                <Row className="py-4 border-bottom align-items-center">
-                    <Col md={6}>
-                      
-                    </Col>
-                    <Col md={4}>
-                        
-                    </Col>
-                   
-                </Row>
+                {bookings.map((booking) => (
+                    <Row key={booking._id} className="py-4 border-bottom align-items-start">
+                        {/* Hotel Info */}
+                        <Col xs={12} md={6} className="d-flex flex-column flex-md-row mb-3 mb-md-0">
+                            <Image src={booking.room.images[0]} alt="hotel_images" rounded className="me-md-3 mb-3 mb-md-0"
+                                style={{ width: "120px", height: "90px", objectFit: "cover", boxShadow: "0 2px 6px rgba(0,0,0,0.1)" }} />
+                            <div>
+                                <p className="fw-bold mb-1">{booking.hotel.name}
+                                    <span className="text-muted ms-1">({booking.room.roomType})</span>
+                                </p>
+                                <div className="text-muted small">
+                                    <div className="d-flex align-items-center mb-1">
+                                        <img src={assets.locationIcon} alt="location_icon" className="me-2" width="16" height="16" />
+                                        <span>{booking.hotel.address}</span>
+                                    </div>
+                                    <div className="d-flex align-items-center mb-1">
+                                        <img src={assets.guestsIcon} alt="guests_icon" className="me-2" width="16" height="16" />
+                                        <span>Guests: {booking.guests}</span>
+                                    </div>
+                                </div>
+                                <p className="mt-2 mb-0 fw-semibold text-dark">Total: ${booking.totalPrice}</p>
+                            </div>
+                        </Col>
 
+                        {/* Date & Timings */}
+                        <Col xs={12} md={4} className="mb-3 mb-md-0">
+                            <div className="d-flex flex-wrap gap-4">
+                                <div>
+                                    <p className="mb-1 fw-semibold">Check-In:</p>
+                                    <p className="text-muted small">{new Date(booking.checkInDate).toDateString()}</p>
+                                </div>
+                                <div>
+                                    <p className="mb-1 fw-semibold">Check-Out:</p>
+                                    <p className="text-muted small">{new Date(booking.checkOutDate).toDateString()}</p>
+                                </div>
+                            </div>
+                        </Col>
+
+                        {/* Payment Status */}
+                        <Col xs={12} md={2}>
+                            <div className="d-flex flex-md-column align-items-start align-items-md-center justify-content-center pt-md-3 gap-2 gap-md-0">
+                                <div className="d-flex align-items-center">
+                                    <div style={{
+                                        width: "12px", height: "12px", borderRadius: "50%", backgroundColor: booking.isPaid ? "#28a745" : "#dc3545", marginRight: "0.5rem"
+                                    }}></div>
+                                    <p className={`mb-0 ${booking.isPaid ? "text-success" : "text-danger"}`}>
+                                        {booking.isPaid ? "Paid" : "Unpaid"}
+                                    </p>
+                                </div>
+                                {!booking.isPaid && (
+                                    <Button variant="outline-secondary" size="sm" className="rounded-pill" style={{ fontSize: "0.75rem" }}>
+                                        Pay Now
+                                    </Button>
+                                )}
+                            </div>
+                        </Col>
+                    </Row>
+                ))}
             </Container>
         </div>
     );

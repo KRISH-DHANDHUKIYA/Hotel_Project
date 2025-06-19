@@ -28,6 +28,14 @@ import roomImg2 from './roomImg2.png'
 import roomImg3 from './roomImg3.png'
 import roomImg4 from './roomImg4.png'
 import regImage from './regImage.png'
+import image1 from './image-1.jpg'
+import image2 from './image-2.jpg'
+import image3 from './image-3.jpg'
+import image4 from './image-4.jpg'
+import image5 from './image-5.jpg'
+import image6 from './image-6.jpg'
+import image7 from './image-7.jpg'
+import image8 from './image-8.jpg'
 import exclusiveOfferCardImg1 from "./exclusiveOfferCardImg1.png";
 import exclusiveOfferCardImg2 from "./exclusiveOfferCardImg2.png";
 import exclusiveOfferCardImg3 from "./exclusiveOfferCardImg3.png";
@@ -66,6 +74,14 @@ export const assets = {
     closeMenu,
     guestsIcon,
     regImage,
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
     addIcon,
     dashboardIcon,
     listIcon,
@@ -148,6 +164,7 @@ export const roomsDummyData = [
         "roomType": "Double Bed",
         "pricePerNight": 399,
         "amenities": ["Room Service", "Mountain View", "Pool Access"],
+        // "images": [image1,image2,image3,image4],
         "images": [roomImg1, roomImg2, roomImg3, roomImg4],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:26:04.013Z",
