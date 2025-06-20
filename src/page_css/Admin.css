@@ -4,3 +4,11 @@
     object-fit: cover;
     vertical-align: middle;
 }
+
+.sidebar-link {
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #D3ECCD; 
+}
