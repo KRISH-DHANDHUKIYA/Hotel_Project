@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Login from '../models/Login'
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -45,7 +44,6 @@ const Header = () => {
             </Nav>
 
             <div className="auth-buttons mt-3 mt-lg-0">
-              <FontAwesomeIcon icon={faMagnifyingGlass} className={`me-3 ${isScrolled ? 'text-dark' : 'text-light'}`} style={{ cursor: "pointer" }} />
               <Button className='bg-danger border-0' onClick={() => setShowLogin(true)}>
                 Log in
               </Button>
@@ -67,7 +65,6 @@ const Header = () => {
             <Link to="/mybooking" onClick={handleClose} className="text-light text-decoration-none py-2">My Booking</Link>
           </Nav>
           <div className="auth-buttons mt-3 text-center">
-            <FontAwesomeIcon icon={faMagnifyingGlass} className='text-light m-2' style={{ cursor: "pointer" }} />
             <Button className='bg-danger border-0' onClick={() => { setShowSidebar(false); setShowLogin(true); }}>
               Log in
             </Button>

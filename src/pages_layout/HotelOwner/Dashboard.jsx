@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, Table } from "react-bootstrap";
+import { Container, Row, Col, Card, Table, Badge } from "react-bootstrap";
 import { assets, dashboardDummyData } from "../../assets/assets";
 import { useState } from "react";
 
@@ -45,7 +45,7 @@ const Dashboard = () => {
                                     style={{ height: "40px" }}
                                 />
                                 <div>
-                                    <Card.Title className="text-success fs-5 mb-1">Total Revenue</Card.Title>
+                                    <Card.Title className="text-primary fs-5 mb-1">Total Revenue</Card.Title>
                                     <Card.Text className="text-secondary mb-0">
                                         ${DashboardData.totalRevenue}
                                     </Card.Text>
@@ -59,39 +59,32 @@ const Dashboard = () => {
                 <div className="mt-5">
                     <h4 className="mb-3 text-dark">Recent Bookings</h4>
                     <div style={{ maxHeight: "320px", overflowY: "auto" }} className="border rounded p-2">
-                        <Table responsive hover className="mb-0">
+                        <Table responsive hover className="mb-0 align-middle">
                             <thead className="table-light">
                                 <tr>
                                     <th>User Name</th>
-                                    <th>Room Name</th>
-                                    <th>Total Amount</th>
-                                    <th>Payment Status</th>
+                                    <th className="d-none d-sm-table-cell">Room Type</th>
+                                    <th className="text-center">Total Amount</th>
+                                    <th className="text-center">Payment Status</th>
                                 </tr>
                             </thead>
+
                             <tbody>
-                                {DashboardData.recentBookings && DashboardData.recentBookings.length > 0 ? (
-                                    DashboardData.recentBookings.map((booking, index) => (
-                                        <tr key={index}>
-                                            <td>{booking.userName}</td>
-                                            <td>{booking.roomName}</td>
-                                            <td>₹{booking.amount}</td>
-                                            <td>
-                                                <span
-                                                    className={`badge ${booking.isPaid ? "bg-success" : "bg-danger"
-                                                        }`}
-                                                >
-                                                    {booking.isPaid ? "Paid" : "Unpaid"}
-                                                </span>
-                                            </td>
-                                        </tr>
-                                    ))
-                                ) : (
-                                    <tr>
-                                        <td colSpan="4" className="text-center text-muted">
-                                            No recent bookings found.
+                                {DashboardData.bookings.map((item, index) => (
+                                    <tr key={index}>
+                                        <td>{item.user.username}</td>
+                                        <td className="d-none d-sm-table-cell">{item.room.roomType}</td>
+                                        <td className="text-center">${item.totalPrice}</td>
+                                        <td className="text-center">
+                                            <Badge
+                                                bg={item.isPaid ? "success" : "warning"}
+                                                className="px-3 py-2 rounded-pill text-capitalize"
+                                            >
+                                                {item.isPaid ? "Completed" : "Pending"}
+                                            </Badge>
                                         </td>
                                     </tr>
-                                )}
+                                ))}
                             </tbody>
                         </Table>
                     </div>

@@ -3,7 +3,7 @@ import { assets } from '../assets/assets'
 
 const Reviewes = () => {
   return (
-    <Container fluid className="my-5 col1 d-flex flex-column align-items-center justify-content-center">
+    <Container fluid className="my-5  d-flex flex-column align-items-center justify-content-center">
       <div className="text-center d-flex flex-column align-items-center justify-content-center mb-5">
         <h1 className="fw-bold font1" style={{ fontFamily: 'Playfair Display, serif', fontSize: '2.5rem' }}>
           What Our Guests Say
