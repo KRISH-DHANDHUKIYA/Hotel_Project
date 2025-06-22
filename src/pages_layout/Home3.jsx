@@ -4,7 +4,7 @@ import { assets } from "../assets/assets";
 
 const Home3 = ({ room, index }) => {
     return (
-        <Link to={`/offers${room._id}`} onClick={() => scrollTo(0, 0)} key={room._id} className="text-decoration-none text-reset ">
+        <Link to={`/room/${room._id}`} onClick={() => scrollTo(0, 0)} key={room._id} className="text-decoration-none text-reset ">
 
             <Card className="w-100 shadow-sm rounded-4 overflow-hidden bg-white mx-auto" style={{ maxWidth: '17.5rem' }}>
                 <div className="position-relative">

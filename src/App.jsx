@@ -21,12 +21,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Endlayout />}>
           <Route index element={<Home />} />
-          <Route path="aboutus" element={<Aboutus />} />
-          <Route path="room" element={<Room />} />
-          <Route path="room/:id" element={<RoomDetails />} />
-          <Route path="facility" element={<Facility />} />
-          <Route path="mybooking" element={<MyBooking />} />
-          <Route path="admin" element={<Admin />} />
+          <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/room" element={<Room />} />
+          <Route path="/room/:id" element={<RoomDetails />} />
+          <Route path="/facility" element={<Facility />} />
+          <Route path="/mybooking" element={<MyBooking />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<Notpage />} />
         </Route>
 

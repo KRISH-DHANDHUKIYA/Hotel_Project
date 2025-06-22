@@ -20,7 +20,7 @@ const Featurdes = () => {
             </Row>
 
             <div className="d-flex justify-content-center">
-                <Link to="/offers" onClick={() => window.scrollTo(0, 0)} className="btn btn-light my-5 px-4 py-2 border border-secondary rounded text-body small fw-medium shadow-sm">
+                <Link to="/room" onClick={() => window.scrollTo(0, 0)} className="btn btn-light my-5 px-4 py-2 border border-secondary rounded text-body small fw-medium shadow-sm">
                     View All Destinations
                 </Link>
             </div>
