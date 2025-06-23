@@ -4,10 +4,10 @@ import "../../page_css/Admin.css";
 
 const Navbar1 = () => {
     return (
-        <Navbar expand="md" bg="white" variant="light" className="border-bottom shadow-sm py-2">
-            <Container className="d-flex justify-content-between align-items-center">
+        <Navbar expand="md" bg="white" variant="light" className="border-bottom shadow-sm py-3">
+            <Container fluid className="d-flex justify-content-between align-items-center">
                 <Link to="/" className="d-flex align-items-center text-decoration-none text-dark">
-                    <Image src="https://logodix.com/logo/92368.png" alt="logo" height="36" className="d-inline-block align-top opacity-75 me-2" />
+                    <Image src="https://logodix.com/logo/92368.png" alt="logo" height="36" className="d-inline-block align-top opacity-75 me-2 ms-5" />
                     <span className="fw-bold font1">HOTEL TAJ</span>
                 </Link>
             </Container>
@@ -16,3 +16,4 @@ const Navbar1 = () => {
 };
 
 export default Navbar1;
+

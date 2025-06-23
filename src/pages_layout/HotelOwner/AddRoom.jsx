@@ -24,17 +24,15 @@ const AddRoom = () => {
 
     return (
         <Container className="my-5">
-            {/* Heading */}
             <div className="mb-4">
-                <h1 className="fw-bold text-start">Add Room</h1>
-                <p className="fs-6 mt-2 text-secondary text-start" style={{ maxWidth: "720px" }}>
+                <h1 className="fw-bold text-start font1">Add Room</h1>
+                <p className="fs-6 mt-2 text-secondary text-start fontt" style={{ maxWidth: "720px" }}>
                     Fill the details carefully — accurate room details, pricing, and amenities enhance the user booking experience.
                 </p>
             </div>
 
-            {/* Room Images */}
             <div className="mb-4">
-                <h5 className="text-dark mb-3">Room Images</h5>
+                <h5 className="text-dark mb-3 fontt">Room Images</h5>
                 <Row className="g-3">
                     {Object.keys(images).map((key) => (
                         <Col xs={6} sm={4} md={3} key={key}>
@@ -42,7 +40,7 @@ const AddRoom = () => {
                                 <img
                                     src={images[key] ? URL.createObjectURL(images[key]) : assets.uploadArea}
                                     alt="upload"
-                                    className="img-fluid border rounded"
+                                    className="img-fluid border rounded "
                                     style={{ cursor: "pointer", height: "160px", objectFit: "cover" }}
                                 />
                             </Form.Label>
@@ -60,13 +58,13 @@ const AddRoom = () => {
                 </Row>
             </div>
 
-            {/* Room Type & Price */}
             <Row className="mb-4">
                 <Col xs={12} sm={6} md={4}>
                     <Form.Group controlId="roomType" className="mb-3">
-                        <Form.Label className="fw-semibold">Room Type</Form.Label>
+                        <Form.Label className="fw-semibold fontt">Room Type</Form.Label>
                         <Form.Select
                             value={inputs.roomType}
+                            className="fontt"
                             onChange={(e) =>
                                 setInputs({ ...inputs, roomType: e.target.value })
                             }
@@ -82,12 +80,13 @@ const AddRoom = () => {
 
                 <Col xs={12} sm={6} md={4}>
                     <Form.Group controlId="pricePerNight" className="mb-3">
-                        <Form.Label className="fw-semibold">
-                            Price <span className="text-muted small">/ Night</span>
+                        <Form.Label className="fontt">
+                            Price <span className="small fontt"> / Night</span>
                         </Form.Label>
                         <Form.Control
                             type="number"
                             placeholder="0"
+                            className="fontt"
                             min="0"
                             value={inputs.pricePerNight}
                             onChange={(e) =>
@@ -98,9 +97,8 @@ const AddRoom = () => {
                 </Col>
             </Row>
 
-            {/* Amenities */}
             <div className="mb-4">
-                <Form.Label className="fw-semibold mb-3">Amenities</Form.Label>
+                <Form.Label className="fw-semibold mb-3 fontt">Amenities</Form.Label>
                 <div className="gap-3">
                     {Object.keys(inputs.amenities).map((amenity, index) => (
                         <Form.Check
@@ -108,7 +106,7 @@ const AddRoom = () => {
                             type="checkbox"
                             id={`amenity-${index}`}
                             label={amenity}
-                            className="me-3"
+                            className="me-3 fontt"
                             checked={inputs.amenities[amenity]}
                             onChange={() =>
                                 setInputs({
@@ -124,11 +122,9 @@ const AddRoom = () => {
                 </div>
             </div>
 
-
-            {/* Submit Button */}
             <Row className="mt-5">
                 <Col className="d-flex justify-content-start">
-                    <Button variant="primary">
+                    <Button variant="primary fontt">
                         Add Room
                     </Button>
                 </Col>

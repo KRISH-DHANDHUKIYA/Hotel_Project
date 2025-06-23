@@ -17,7 +17,7 @@ const Sidebar = () => {
           <Link
             to={item.path}
             key={index}
-            className="sidebar-link text-dark text-decoration-none d-flex align-items-center py-3 px-2 px-md-4 gap-2"
+            className="sidebar-link text-dark text-decoration-none d-flex align-items-center py-3 px-2 px-md-4 gap-2 fontt"
           >
             <img
               src={item.icon}

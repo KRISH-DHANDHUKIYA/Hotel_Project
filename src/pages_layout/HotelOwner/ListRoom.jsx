@@ -1,42 +1,40 @@
 import { Container, Table, Form } from "react-bootstrap";
-import { roomsDummyData } from "../../assets/assets"; // Make sure this path is correct
+import { roomsDummyData } from "../../assets/assets";
 
 const ListRoom = () => {
-    const rooms = roomsDummyData; // Use your actual data source
+    const rooms = roomsDummyData;
 
     return (
         <Container className="my-5">
-            {/* Heading */}
             <div className="mb-4">
-                <h1 className="fw-bold text-start">Manage Rooms</h1>
-                <p className="fs-6 mt-2 text-secondary text-start" style={{ maxWidth: "720px" }}>
+                <h1 className="fw-bold text-start font1">Manage Rooms</h1>
+                <p className="fs-6 mt-2 text-secondary text-start fontt" style={{ maxWidth: "720px" }}>
                     View, edit, or manage all listed rooms. Keep the information up-to-date to provide the best experience for users.
                 </p>
             </div>
 
-            <p className="text-muted fw-semibold mb-3">All Rooms</p>
+            <p className="text-muted fw-semibold mb-3 fontt">All Rooms</p>
 
             <div style={{ maxHeight: "320px", overflowY: "auto" }}>
                 <Table striped bordered hover responsive className="align-middle text-nowrap">
-                    <thead className="table-light">
+                    <thead className="table-light fontt">
                         <tr>
-                            <th>Name</th>
-                            <th>Facility</th>
-                            <th>Price / Night</th>
-                            <th className="text-center">Actions</th>
+                            <th className="fontt">Name</th>
+                            <th className="fontt">Facility</th>
+                            <th className="fontt">Price / Night</th>
+                            <th className="text-center fontt">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         {rooms.map((item, index) => (
-                            <tr key={index}>
-                                <td>{item.roomType}</td>
-                                <td>{item.amenities.join(', ')}</td>
-                                <td>{item.pricePerNight}</td>
-                                <td className="text-center">
+                            <tr key={index} className="fontt">
+                                <td className="fontt">{item.roomType}</td>
+                                <td className="fontt">{item.amenities.join(', ')}</td>
+                                <td className="fontt">{item.pricePerNight}</td>
+                                <td className="text-center fontt">
                                     <Form.Check
                                         type="switch"
                                         id={`availability-switch-${index}`}
-                                        // label={item.isAvailable ? "Available" : "Unavailable"}
                                         checked={item.isAvailable}
                                         readOnly
                                     />

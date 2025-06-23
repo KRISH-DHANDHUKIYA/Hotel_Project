@@ -10,17 +10,17 @@ const MyBooking = () => {
         <div className="pt-5 pb-5" style={{ backgroundColor: "#f9f9f9" }}>
             <Container fluid="lg" className="px-3 px-md-4 px-lg-5">
                 <div className="mb-4">
-                    <h1 className="fw-bold">My Bookings</h1>
-                    <p className="fs-6 mt-2 text-secondary" style={{ maxWidth: "720px" }}>
+                    <h1 className="fw-bold font1">My Bookings</h1>
+                    <p className="fs-6 mt-2 text-secondary fontt" style={{ maxWidth: "720px" }}>
                         Easily manage your past, current, and upcoming hotel reservations in one place. Plan your trips seamlessly with just a few clicks.
                     </p>
                 </div>
 
                 {/* Table Headers for md and up */}
                 <Row className="border-bottom border-secondary-subtle py-3 fw-medium d-none d-md-flex">
-                    <Col md={6}>Hotels</Col>
-                    <Col md={4}>Date & Timings</Col>
-                    <Col md={2}>Payment</Col>
+                    <Col md={6} className="fontt">Hotels</Col>
+                    <Col md={4} className="fontt">Date & Timings</Col>
+                    <Col md={2} className="fontt">Payment</Col>
                 </Row>
 
                 {bookings.map((booking) => (
@@ -30,20 +30,20 @@ const MyBooking = () => {
                             <Image src={booking.room.images[0]} alt="hotel_images" rounded className="me-md-3 mb-3 mb-md-0"
                                 style={{ width: "120px", height: "90px", objectFit: "cover", boxShadow: "0 2px 6px rgba(0,0,0,0.1)" }} />
                             <div>
-                                <p className="fw-bold mb-1">{booking.hotel.name}
-                                    <span className="text-muted ms-1">({booking.room.roomType})</span>
+                                <p className="fw-bold mb-1 fontt">{booking.hotel.name}
+                                    <span className="text-muted ms-1 fontt">({booking.room.roomType})</span>
                                 </p>
                                 <div className="text-muted small">
                                     <div className="d-flex align-items-center mb-1">
                                         <img src={assets.locationIcon} alt="location_icon" className="me-2" width="16" height="16" />
-                                        <span>{booking.hotel.address}</span>
+                                        <span className="fontt">{booking.hotel.address}</span>
                                     </div>
                                     <div className="d-flex align-items-center mb-1">
                                         <img src={assets.guestsIcon} alt="guests_icon" className="me-2" width="16" height="16" />
-                                        <span>Guests: {booking.guests}</span>
+                                        <span className="fontt">Guests: {booking.guests}</span>
                                     </div>
                                 </div>
-                                <p className="mt-2 mb-0 fw-semibold text-dark">Total: ${booking.totalPrice}</p>
+                                <p className="mt-2 mb-0 fw-semibold text-dark fontt">Total: ${booking.totalPrice}</p>
                             </div>
                         </Col>
 
@@ -51,12 +51,12 @@ const MyBooking = () => {
                         <Col xs={12} md={4} className="mb-3 mb-md-0">
                             <div className="d-flex flex-wrap gap-4">
                                 <div>
-                                    <p className="mb-1 fw-semibold">Check-In:</p>
-                                    <p className="text-muted small">{new Date(booking.checkInDate).toDateString()}</p>
+                                    <p className="mb-1 fw-semibold fontt">Check-In:</p>
+                                    <p className="text-muted small fontt">{new Date(booking.checkInDate).toDateString()}</p>
                                 </div>
                                 <div>
-                                    <p className="mb-1 fw-semibold">Check-Out:</p>
-                                    <p className="text-muted small">{new Date(booking.checkOutDate).toDateString()}</p>
+                                    <p className="mb-1 fw-semibold fontt">Check-Out:</p>
+                                    <p className="text-muted small fontt">{new Date(booking.checkOutDate).toDateString()}</p>
                                 </div>
                             </div>
                         </Col>
@@ -68,12 +68,12 @@ const MyBooking = () => {
                                     <div style={{
                                         width: "12px", height: "12px", borderRadius: "50%", backgroundColor: booking.isPaid ? "#28a745" : "#dc3545", marginRight: "0.5rem"
                                     }}></div>
-                                    <p className={`mb-0 ${booking.isPaid ? "text-success" : "text-danger"}`}>
+                                    <p className={`fontt mb-0 ${booking.isPaid ? "text-success" : "text-danger"} `}>
                                         {booking.isPaid ? "Paid" : "Unpaid"}
                                     </p>
                                 </div>
                                 {!booking.isPaid && (
-                                    <Button variant="outline-secondary" size="sm" className="rounded-pill" style={{ fontSize: "0.75rem" }}>
+                                    <Button variant="outline-secondary" size="sm" className="rounded-pill fontt" style={{ fontSize: "0.75rem" }}>
                                         Pay Now
                                     </Button>
                                 )}

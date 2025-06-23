@@ -53,8 +53,8 @@ const Room1 = () => {
             <div className="d-flex flex-column-reverse flex-lg-row align-items-start justify-content-between mt-5 px-4 px-md-5 px-lg-6 px-xl-7">
                 <div>
                     <div className="d-flex flex-column align-items-start text-start">
-                        <h1 className="fw-bold font1">Rooms Details</h1>
-                        <p className="fs-6 fs-md-5 mt-2 font2" style={{ color: 'rgba(107, 114, 128, 0.9)', maxWidth: '696px' }}>
+                        <h1 className="fw-bold font1">Explore the Room</h1>
+                        <p className="fs-6 fs-md-5 mt-2 fontt" style={{ color: 'rgba(107, 114, 128, 0.9)', maxWidth: '696px' }}>
                             Take advantage of our limited-time offers and special packages to enhance your stay and create unforgettable memories.
                         </p>
                     </div>
@@ -69,7 +69,7 @@ const Room1 = () => {
                             </Link>
 
                             <div className="d-flex flex-column gap-2 mt-3">
-                                <p className="text-muted">{room.hotel.city}</p>
+                                <p className="text-muted fontt">{room.hotel.city}</p>
 
                                 <Link to={`/room/${room._id}`} onClick={() => scrollTo(0, 0)} style={{ textDecoration: 'none' }}>
                                     <p style={{ color: '#1F2937', fontSize: '30px', cursor: 'pointer' }} className="font1">
@@ -83,24 +83,24 @@ const Room1 = () => {
                                     <img src={assets.starIconFilled} alt="filled star" />
                                     <img src={assets.starIconFilled} alt="filled star" />
                                     <img src={assets.starIconFilled} alt="filled star" />
-                                    <p className="ms-2 mb-0">200+ Reviews</p>
+                                    <p className="ms-2 mb-0 fontt">200+ Reviews</p>
                                 </div>
 
                                 <div className="d-flex align-items-center gap-1 mt-2 fs-6" style={{ color: '#6B7280' }}>
                                     <img src={assets.locationIcon} alt="location" />
-                                    <span>{room.hotel.address}</span>
+                                    <span className="fontt">{room.hotel.address}</span>
                                 </div>
 
                                 <div className="d-flex flex-wrap align-items-center mt-3 mb-4 gap-3">
                                     {room.amenities.map((item, index) => (
                                         <div key={index} className="d-flex align-items-center gap-2 px-3 py-2 rounded" style={{ backgroundColor: 'rgba(245, 245, 255, 0.7)' }}>
                                             <img key={index} src={facilityIcons[item]} title={item} style={{ width: '20px', height: '20px' }} />
-                                            <p className="small mb-0">{item}</p>
+                                            <p className="small mb-0 fontt">{item}</p>
                                         </div>
                                     ))}
                                 </div>
 
-                                <p className="fs-4 fw-medium text-dark">${room.pricePerNight} / Night</p>
+                                <p className="fs-4 fw-medium text-dark fontt">Price : ${room.pricePerNight} / Night</p>
                             </div>
                         </div>
                     ))}
@@ -108,7 +108,7 @@ const Room1 = () => {
 
                 <div className="bg-white border text-secondary mb-4 mb-lg-0 mt-lg-5" style={{ width: '20rem' }}>
                     <div className="d-flex align-items-center justify-content-between px-3 py-2 border-bottom">
-                        <p className="fw-medium text-dark text-uppercase mb-0 fs-6">Filters</p>
+                        <p className="fw-medium text-dark text-uppercase mb-0 fs-6 fontt">Filters</p>
 
                         <Button
                             variant="link"
@@ -121,7 +121,7 @@ const Room1 = () => {
                             {openFilter ? 'Hide' : 'Show'}
                         </Button>
 
-                        <span className="text-uppercase d-none d-lg-inline" style={{ cursor: 'pointer' }}>
+                        <span className="text-uppercase d-none d-lg-inline fontt" style={{ cursor: 'pointer' }}>
                             Clear
                         </span>
                     </div>
@@ -130,23 +130,23 @@ const Room1 = () => {
                         <div id="filter-collapse">
                             <div className="px-3 pt-3 pb-4">
                                 <div className="mb-4">
-                                    <p className="fw-medium text-dark mb-2 fs-6">Popular Filters</p>
+                                    <p className="fw-medium text-dark mb-2 fs-6 fontt">Popular Filters</p>
                                     {RoomType.map((room, index) => (
-                                        <Checkbox key={index} label={room} />
+                                        <Checkbox key={index}  label={room} className="fontt" />
                                     ))}
                                 </div>
 
                                 <div className="mb-4">
-                                    <p className="fw-medium text-dark mb-2 fs-6">Price Range</p>
+                                    <p className="fw-medium text-dark mb-2 fs-6 fontt">Price Range</p>
                                     {PriceRange.map((range, index) => (
-                                        <Checkbox key={index} label={`$ ${range}`} />
+                                        <Checkbox key={index} label={`$ ${range}`} className="fontt" />
                                     ))}
                                 </div>
 
                                 <div>
-                                    <p className="fw-medium text-dark mb-2 fs-6">Sort By</p>
+                                    <p className="fw-medium text-dark mb-2 fs-6 fontt">Sort By</p>
                                     {SortOption.map((option, index) => (
-                                        <RadioButton key={index} label={option} />
+                                        <RadioButton key={index} label={option} className="fontt" />
                                     ))}
                                 </div>
                             </div>
