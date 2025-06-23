@@ -6,7 +6,7 @@ import "../page_css/Aboutus.css"
 const NewsEvents = () => {
     return (
         <>
-            <Container className="my-5 page-content">
+            <Container className="my-5">
                 <Row className="align-items-center gy-4">
                     <Col xs={12} md={6}>
                         <div style={{ height: '100%', minHeight: '200px' }}>

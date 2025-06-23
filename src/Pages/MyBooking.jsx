@@ -8,7 +8,7 @@ const MyBooking = () => {
 
     return (
         <div className="pt-5 pb-5" style={{ backgroundColor: "#f9f9f9" }}>
-            <Container fluid="lg" className="px-3 px-md-4 px-lg-5" style={{ paddingTop: "7rem" }}>
+            <Container fluid="lg" className="px-3 px-md-4 px-lg-5">
                 <div className="mb-4">
                     <h1 className="fw-bold">My Bookings</h1>
                     <p className="fs-6 mt-2 text-secondary" style={{ maxWidth: "720px" }}>

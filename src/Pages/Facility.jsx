@@ -3,7 +3,7 @@ import "../page_css/Facilityp.css";
 
 const Facility = () => {
     return (
-        <div className="page-content1">
+        <div className="mt-5">
             <Container>
                 <Row className="align-items-center mb-5">
                     <Col lg={5}>

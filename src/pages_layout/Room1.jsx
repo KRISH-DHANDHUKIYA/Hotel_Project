@@ -50,7 +50,7 @@ const Room1 = () => {
 
     return (
         <>
-            <div className="page-content d-flex flex-column-reverse flex-lg-row align-items-start justify-content-between px-4 px-md-5 px-lg-6 px-xl-7" style={{ paddingTop: '7rem' }}>
+            <div className="d-flex flex-column-reverse flex-lg-row align-items-start justify-content-between mt-5 px-4 px-md-5 px-lg-6 px-xl-7">
                 <div>
                     <div className="d-flex flex-column align-items-start text-start">
                         <h1 className="fw-bold font1">Rooms Details</h1>

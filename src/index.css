@@ -9,12 +9,12 @@
     font-weight: bold;
 }
 
-.font2 {
-    font-family: "Open Sans", sans-serif;
+.fontm {
+    font-family: "Merriweather", serif;
 }
 
-.font3 {
-    font-family: 'Times New Roman', Times, serif;
+.fontt {
+    font-family: "Open Sans", sans-serif;
 }
 
 .logo1 {
@@ -95,12 +95,22 @@
         text-align: center;
     }
 }
-.page-content {
-  padding-top: 90px; 
+
+.icons1 {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
 }
 
-.page-content1 {
-    padding-top: 150px;
+.icons1:hover {
+  background-color: #fff ; 
+  color: #007bff;           
+  transform: scale(1.1);
 }
-
-

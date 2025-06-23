@@ -3,12 +3,12 @@ import { assets } from '../assets/assets'
 
 const Reviewes = () => {
   return (
-    <Container fluid className="my-5  d-flex flex-column align-items-center justify-content-center">
+    <Container fluid className="my-5 d-flex flex-column align-items-center justify-content-center">
       <div className="text-center d-flex flex-column align-items-center justify-content-center mb-5">
-        <h1 className="fw-bold font1" style={{ fontFamily: 'Playfair Display, serif', fontSize: '2.5rem' }}>
+        <h1 className="fw-bold fontm" style={{ fontSize: '2.5rem' }}>
           What Our Guests Say
         </h1>
-        <p className="text-muted mt-2 font2" style={{ maxWidth: '700px', fontSize: '1rem' }}>
+        <p className="text-muted mt-2 fontt" style={{ maxWidth: '700px', fontSize: '1rem' }}>
           Discover why discerning travelers consistently choose QuickStay for their exclusive and luxurious accommodations around the world.
         </p>
       </div>
@@ -23,7 +23,7 @@ const Reviewes = () => {
                 style={{ width: '80px', height: '80px', objectFit: 'cover' }}
               />
             </div>
-            <Card.Title className="text-lg text-gray-900 fw-medium mb-1">
+            <Card.Title className="text-lg text-gray-900 fw-medium mb-1 fontt">
               Suyash Sharma
             </Card.Title>
             <div className="d-flex justify-content-center mt-3 gap-1">
@@ -33,7 +33,7 @@ const Reviewes = () => {
               <img src={assets.starIconFilled} alt="star" />
               <img src={assets.starIconFilled} alt="star" />
             </div>
-            <Card.Text className="text-center mt-3 text-gray-500" style={{ fontSize: '15px' }}>
+            <Card.Text className="text-center mt-3 text-gray-500 fontt" style={{ fontSize: '15px' }}>
               The exceptional customer service at this hotel impressed me. They were always friendly and asked how our stay was going every time we walked in the door. They were also able to recommend places to get any meal that we needed.
             </Card.Text>
           </Card>
@@ -49,7 +49,7 @@ const Reviewes = () => {
                 style={{ width: '80px', height: '80px', objectFit: 'cover' }}
               />
             </div>
-            <Card.Title className="text-lg text-gray-900 fw-medium mb-1">
+            <Card.Title className="text-lg text-gray-900 fw-medium mb-1 fontt">
               Tim David
             </Card.Title>
             <div className="d-flex justify-content-center mt-3 gap-1">
@@ -59,7 +59,7 @@ const Reviewes = () => {
               <img src={assets.starIconFilled} alt="star" />
               <img src={assets.starIconOutlined} alt="star2" />
             </div>
-            <Card.Text className="text-center mt-3 text-gray-500" style={{ fontSize: '15px' }}>
+            <Card.Text className="text-center mt-3 text-gray-500 fontt" style={{ fontSize: '15px' }}>
               The hotel was beautiful, with clean and comfortable rooms. It was even better than expected. The price was terrific. There were great restaurants within walking distance. I would definitely stay there again.
             </Card.Text>
           </Card>
@@ -75,7 +75,7 @@ const Reviewes = () => {
                 style={{ width: '80px', height: '80px', objectFit: 'cover' }}
               />
             </div>
-            <Card.Title className="text-lg text-gray-900 fw-medium mb-1">
+            <Card.Title className="text-lg text-gray-900 fw-medium mb-1 fontt">
               Samar Joshef
             </Card.Title>
             <div className="d-flex justify-content-center mt-3 gap-1">
@@ -85,7 +85,7 @@ const Reviewes = () => {
               <img src={assets.starIconFilled} alt="star" />
               <img src={assets.starIconOutlined} alt="star2" />
             </div>
-            <Card.Text className="text-center mt-3 text-gray-500" style={{ fontSize: '15px' }}>
+            <Card.Text className="text-center mt-3 text-gray-500 fontt" style={{ fontSize: '15px' }}>
               I recently stayed at Hotel Taj and it was one of the best hotel experiences I've ever had. The Room was spacious and comfortable, and the amenities were top-notch, with helpful and friendly staff.
             </Card.Text>
           </Card>
