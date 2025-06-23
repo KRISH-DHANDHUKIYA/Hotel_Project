@@ -39,8 +39,8 @@ const AddRoom = () => {
                             <Form.Label htmlFor={`roomImage${key}`} className="w-100">
                                 <img
                                     src={images[key] ? URL.createObjectURL(images[key]) : assets.uploadArea}
-                                    alt="upload"
-                                    className="img-fluid border rounded "
+                                    alt="upload image"
+                                    className="img-fluid border rounded"
                                     style={{ cursor: "pointer", height: "160px", objectFit: "cover" }}
                                 />
                             </Form.Label>

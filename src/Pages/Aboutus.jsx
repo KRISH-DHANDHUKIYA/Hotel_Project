@@ -9,7 +9,24 @@ const NewsEvents = () => {
                 <Row className="align-items-center gy-4">
                     <Col xs={12} md={6}>
                         <div style={{ height: '100%', minHeight: '200px' }}>
-                            <Image src="https://watermark.lovepik.com/photo/20211123/large/lovepik-hotel-lobby-picture_500786361.jpg" alt="Hotel Exterior" fluid style={{ height: '100%', width: '100%', objectFit: 'cover', borderRadius: '0.5rem' }} />
+                            {/* <Image src="https://watermark.lovepik.com/photo/20211123/large/lovepik-hotel-lobby-picture_500786361.jpg" alt="Hotel Exterior" fluid style={{ height: '100%', width: '100%', objectFit: 'cover', borderRadius: '0.5rem' }} /> */}
+                            <div className="hover14">
+                                <figure>
+                                    <Image
+                                        src="https://watermark.lovepik.com/photo/20211123/large/lovepik-hotel-lobby-picture_500786361.jpg"
+                                        alt="Hotel Exterior"
+                                        fluid
+                                        style={{
+                                            height: '100%',
+                                            width: '100%',
+                                            objectFit: 'cover',
+                                            borderRadius: '0.5rem',
+                                        }}
+                                    />
+                                </figure>
+                            </div>
+
+
                         </div>
                     </Col>
                     <Col xs={12} md={6}>

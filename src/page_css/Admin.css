@@ -1,8 +1,8 @@
 .logo1 {
-    height: 40px;
-    width: 40px;
-    object-fit: cover;
-    vertical-align: middle;
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  vertical-align: middle;
 }
 
 .sidebar-link {
@@ -10,5 +10,5 @@
 }
 
 .sidebar-link:hover {
-  background-color: #D3ECCD; 
+  background-color: #555854;
 }

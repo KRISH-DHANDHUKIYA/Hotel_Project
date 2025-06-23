@@ -28,14 +28,6 @@ import roomImg2 from './roomImg2.png'
 import roomImg3 from './roomImg3.png'
 import roomImg4 from './roomImg4.png'
 import regImage from './regImage.png'
-import image1 from './image-1.jpg'
-import image2 from './image-2.jpg'
-import image3 from './image-3.jpg'
-import image4 from './image-4.jpg'
-import image5 from './image-5.jpg'
-import image6 from './image-6.jpg'
-import image7 from './image-7.jpg'
-import image8 from './image-8.jpg'
 import exclusiveOfferCardImg1 from "./exclusiveOfferCardImg1.png";
 import exclusiveOfferCardImg2 from "./exclusiveOfferCardImg2.png";
 import exclusiveOfferCardImg3 from "./exclusiveOfferCardImg3.png";
@@ -45,7 +37,24 @@ import listIcon from "./listIcon.svg";
 import uploadArea from "./uploadArea.svg";
 import totalBookingIcon from "./totalBookingIcon.svg";
 import totalRevenueIcon from "./totalRevenueIcon.svg";
-
+import image1 from './image-1.jpg'
+import image2 from './image-2.jpg'
+import image3 from './image-3.jpg'
+import image4 from './image-4.jpg'
+import image5 from './image-5.jpg'
+import image6 from './image-6.jpg'
+import image7 from './image-7.jpg'
+import image8 from './image-8.jpg'
+import plussolid from './plus-solid.svg'
+import plussolid2 from './plus-solid (2).svg'
+import chartline from './chart-line-solid.svg'
+import listsolid from './list-solid.svg'
+import plusminussolid from './plus-minus-solid.svg'
+import hotelsolid from './hotel-solid.svg'
+import dollarsignsolid from './dollar-sign-solid.svg'
+import starfill from './star-fill.svg'
+import staroutline from './star-outline.svg'
+import location333 from './location1.svg'
 
 export const assets = {
     logo,
@@ -74,6 +83,12 @@ export const assets = {
     closeMenu,
     guestsIcon,
     regImage,
+    addIcon,
+    dashboardIcon,
+    listIcon,
+    uploadArea,
+    totalBookingIcon,
+    totalRevenueIcon,
     image1,
     image2,
     image3,
@@ -82,12 +97,16 @@ export const assets = {
     image6,
     image7,
     image8,
-    addIcon,
-    dashboardIcon,
-    listIcon,
-    uploadArea,
-    totalBookingIcon,
-    totalRevenueIcon,
+    plussolid,
+    plussolid2,
+    listsolid,
+    chartline,
+    plusminussolid,
+    hotelsolid,
+    dollarsignsolid,
+    starfill,
+    staroutline,
+    location333
 }
 
 export const cities = [

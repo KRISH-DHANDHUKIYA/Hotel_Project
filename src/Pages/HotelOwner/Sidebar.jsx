@@ -5,13 +5,13 @@ import '../../page_css/Admin.css'
 
 const Sidebar = () => {
   const sidebarLinks = [
-    { name: "Dashboard", path: "/owner", icon: assets.dashboardIcon },
-    { name: "Add Room", path: "/owner/add-room", icon: assets.addIcon },
-    { name: "List Room", path: "/owner/list-room", icon: assets.listIcon }
+    { name: "Dashboard", path: "/owner", icon: assets.chartline },
+    { name: "Add Room", path: "/owner/add-room", icon: assets.plusminussolid },
+    { name: "List Room", path: "/owner/list-room", icon: assets.listsolid }
   ];
 
   return (
-    <div className="h-100 border-end bg-white pt-3 px-1 px-md-0">
+    <div className="h-100 border-end bg-dark  pt-3 px-1 px-md-0">
       <Nav className="flex-column">
         {sidebarLinks.map((item, index) => (
           <Link
@@ -23,9 +23,9 @@ const Sidebar = () => {
               src={item.icon}
               alt={`${item.name} icon`}
               style={{ width: 20, height: 20 }}
-              className="me-2"
+              className="me-2 dem1"
             />
-            <span className="d-none d-md-inline">{item.name}</span>
+            <span className="d-none d-md-inline text-light">{item.name}</span>
           </Link>
         ))}
       </Nav>

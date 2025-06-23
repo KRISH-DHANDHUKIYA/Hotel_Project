@@ -78,16 +78,16 @@ const Room1 = () => {
                                 </Link>
 
                                 <div className="d-flex align-items-center">
-                                    <img src={assets.starIconFilled} alt="filled star" />
-                                    <img src={assets.starIconFilled} alt="filled star" />
-                                    <img src={assets.starIconFilled} alt="filled star" />
-                                    <img src={assets.starIconFilled} alt="filled star" />
-                                    <img src={assets.starIconFilled} alt="filled star" />
+                                    <img src={assets.starfill} width={16} height={16} alt="filled star" />
+                                    <img src={assets.starfill} width={16} height={16} alt="filled star" />
+                                    <img src={assets.starfill} width={16} height={16} alt="filled star" />
+                                    <img src={assets.starfill} width={16} height={16} alt="filled star" />
+                                    <img src={assets.staroutline} width={16} height={16} alt="filled star" />
                                     <p className="ms-2 mb-0 fontt">200+ Reviews</p>
                                 </div>
 
                                 <div className="d-flex align-items-center gap-1 mt-2 fs-6" style={{ color: '#6B7280' }}>
-                                    <img src={assets.locationIcon} alt="location" />
+                                    <img src={assets.location333} width={16} height={16} alt="location" />
                                     <span className="fontt">{room.hotel.address}</span>
                                 </div>
 
@@ -132,7 +132,7 @@ const Room1 = () => {
                                 <div className="mb-4">
                                     <p className="fw-medium text-dark mb-2 fs-6 fontt">Popular Filters</p>
                                     {RoomType.map((room, index) => (
-                                        <Checkbox key={index}  label={room} className="fontt" />
+                                        <Checkbox key={index} label={room} className="fontt" />
                                     ))}
                                 </div>
 

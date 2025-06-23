@@ -15,23 +15,25 @@ const Reviewes = () => {
       <Row className="justify-content-center g-4">
         <Col xs={12} md={6} lg={4} className="d-flex justify-content-center">
           <Card className="text-center p-4 border border-secondary-subtle rounded-lg shadow-sm" style={{ width: '18rem' }}>
-            <div className="d-flex justify-content-center mb-3">
+            <div className="d-flex justify-content-center mb-3 hover13">
+               <figure>
               <Image
                 src="https://avatars.mds.yandex.net/i?id=709c594cad8f14e76a45c7dd6f927a13eadc12f5-3908415-images-thumbs&n=13"
                 alt="Donald Jackman"
                 roundedCircle
                 style={{ width: '80px', height: '80px', objectFit: 'cover' }}
               />
+              </figure>
             </div>
             <Card.Title className="text-lg text-gray-900 fw-medium mb-1 fontt">
               Suyash Sharma
             </Card.Title>
             <div className="d-flex justify-content-center mt-3 gap-1">
-              <img src={assets.starIconFilled} alt="star1" />
-              <img src={assets.starIconFilled} alt="star" />
-              <img src={assets.starIconFilled} alt="star" />
-              <img src={assets.starIconFilled} alt="star" />
-              <img src={assets.starIconFilled} alt="star" />
+              <img src={assets.starfill} width={16} height={16} alt="star1" />
+              <img src={assets.starfill} width={16} height={16} alt="star" />
+              <img src={assets.starfill} width={16} height={16} alt="star" />
+              <img src={assets.starfill} width={16} height={16} alt="star" />
+              <img src={assets.staroutline} width={16} height={16} alt="star" />
             </div>
             <Card.Text className="text-center mt-3 text-gray-500 fontt" style={{ fontSize: '15px' }}>
               The exceptional customer service at this hotel impressed me. They were always friendly and asked how our stay was going every time we walked in the door. They were also able to recommend places to get any meal that we needed.
@@ -41,14 +43,17 @@ const Reviewes = () => {
 
         <Col xs={12} md={6} lg={4} className="d-flex justify-content-center">
           <Card className="text-center p-4 border border-secondary-subtle rounded-lg shadow-sm" style={{ width: '18rem' }}>
-            <div className="d-flex justify-content-center mb-3">
-              <Image
-                src="https://avatars.mds.yandex.net/i?id=7639312ee343715e79c0fca18b205774411eabcd-5247757-images-thumbs&n=13"
-                alt="Richard Nelson"
-                roundedCircle
-                style={{ width: '80px', height: '80px', objectFit: 'cover' }}
-              />
+            <div className="d-flex justify-content-center mb-3 hover13">
+              <figure>
+                <Image
+                  src="https://avatars.mds.yandex.net/i?id=7639312ee343715e79c0fca18b205774411eabcd-5247757-images-thumbs&n=13"
+                  alt="Richard Nelson"
+                  roundedCircle
+                  style={{ width: '80px', height: '80px', objectFit: 'cover' }}
+                />
+              </figure>
             </div>
+
             <Card.Title className="text-lg text-gray-900 fw-medium mb-1 fontt">
               Tim David
             </Card.Title>
@@ -67,13 +72,15 @@ const Reviewes = () => {
 
         <Col xs={12} md={6} lg={4} className="d-flex justify-content-center">
           <Card className="text-center p-4 border border-secondary-subtle rounded-lg shadow-sm" style={{ width: '18rem' }}>
-            <div className="d-flex justify-content-center mb-3">
+            <div className="d-flex justify-content-center mb-3 hover13">
+              <figure>
               <Image
                 src="https://diccut.com/upload/photos/2024/10/NRefIhbwhuVskAymDlrW_09_c7d1067df7b17a97c8b882e2772c1e47_avatar_full.jpg"
                 alt="James Washington"
                 roundedCircle
                 style={{ width: '80px', height: '80px', objectFit: 'cover' }}
               />
+              </figure>
             </div>
             <Card.Title className="text-lg text-gray-900 fw-medium mb-1 fontt">
               Samar Joshef

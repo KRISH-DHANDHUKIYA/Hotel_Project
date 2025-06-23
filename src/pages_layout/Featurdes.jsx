@@ -7,7 +7,7 @@ const Featurdes = () => {
     return (
         <div id="features333" className='bg-light mb-5'>
             <Container className="py-5">
-                
+
                 <div className="mb-5">
                     <h1 className="fw-bold text-center fontm">Featured Destination</h1>
                     <p className="fs-6 mt-2 text-secondary text-center fontt" style={{ maxWidth: "600px", margin: "0 auto" }}>
@@ -23,8 +23,8 @@ const Featurdes = () => {
                 </Row>
 
                 <div className="d-flex justify-content-center">
-                    <Link to="/room" onClick={() => window.scrollTo(0, 0)} className="btn btn-light my-5 px-4 py-2 border border-secondary rounded text-body small fw-medium shadow-sm fontt">
-                        View All Destinations
+                    <Link to="/room" onClick={() => window.scrollTo(0, 0)} className="btn btn-danger text-light my-5 px-4 py-2 border border-danger rounded  small fw-medium shadow-sm fontt">
+                        Explore the Full List
                     </Link>
                 </div>
 

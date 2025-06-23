@@ -15,16 +15,16 @@ const Dashboard = () => {
 
                 <Row className="mt-4 g-4">
                     <Col xs={12} sm={6} md={4}>
-                        <Card className="border border-primary bg-light-subtle shadow-sm h-100">
+                        <Card className="border border-dark bg-light-subtle shadow-sm h-100">
                             <Card.Body className="d-flex align-items-center">
                                 <img
-                                    src={assets.totalBookingIcon}
+                                    src={assets.hotelsolid}
                                     alt="Total Bookings Icon"
                                     className="me-3"
-                                    style={{ height: "40px" }}
+                                    style={{ height: "25px" }}
                                 />
                                 <div>
-                                    <Card.Title className="text-primary fs-5 mb-1 fontt">Total Bookings</Card.Title>
+                                    <Card.Title className="text-dark fs-5 mb-1 fontt">Total Bookings</Card.Title>
                                     <Card.Text className="text-secondary mb-0 fontt">
                                         {DashboardData.totalBookings}
                                     </Card.Text>
@@ -34,16 +34,16 @@ const Dashboard = () => {
                     </Col>
 
                     <Col xs={12} sm={6} md={4}>
-                        <Card className="border border-primary bg-light-subtle shadow-sm h-100">
+                        <Card className="border border-dark bg-light-subtle shadow-sm h-100">
                             <Card.Body className="d-flex align-items-center">
                                 <img
-                                    src={assets.totalRevenueIcon}
+                                    src={assets.dollarsignsolid}
                                     alt="Total Revenue Icon"
-                                    className="me-3 "
-                                    style={{ height: "40px" }}
+                                    className="me-3"
+                                    style={{ height: "25px" }}
                                 />
                                 <div>
-                                    <Card.Title className="text-primary fs-5 mb-1 fontt">Total Revenue</Card.Title>
+                                    <Card.Title className="text-dark fs-5 mb-1 fontt">Total Revenue</Card.Title>
                                     <Card.Text className="text-secondary mb-0 fontt">
                                         ${DashboardData.totalRevenue}
                                     </Card.Text>

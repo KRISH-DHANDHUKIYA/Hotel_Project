@@ -8,10 +8,16 @@ const Home3 = ({ room, index }) => {
 
             <Card className="w-100 shadow-sm rounded-4 overflow-hidden bg-white mx-auto" style={{ maxWidth: '17.5rem' }}>
                 <div className="position-relative">
-                    <Card.Img src={room.images[0]} alt="Room" />
+                    <div className="zoom-container">
+                        <Card.Img
+                            src={room.images[0]}
+                            alt="Room"
+                            className="zoom-img"
+                        />
+                    </div>
 
                     {index % 2 === 0 && (
-                        <Badge bg="light" text="dark" className="position-absolute top-0 start-0 mt-3 ms-3 fs-6 fw-semibold rounded-pill">
+                        <Badge bg="danger" text="light" className="position-absolute top-0 start-0 mt-3 ms-3 fs-6 fw-semibold rounded-pill">
                             Best Seller
                         </Badge>
                     )}
@@ -25,14 +31,14 @@ const Home3 = ({ room, index }) => {
                             </Card.Title>
                         </Col>
                         <Col xs="auto" className="d-flex align-items-center">
-                            <Image src={assets.starIconFilled} alt="Rating" width={16} height={16} className="me-1" />
+                            <Image src={assets.starfill} alt="Rating" width={16} height={16} className="me-1" />
                             <small>4.5</small>
                         </Col>
                     </Row>
 
                     <Row className="align-items-center mb-3">
                         <Col xs="auto">
-                            <Image src={assets.locationIcon} alt="Location" width={14} height={14} className="me-1" />
+                            <Image src={assets.location333} alt="Location" width={14} height={14} className="me-1" />
                         </Col>
                         <Col className="ps-0">
                             <small className="text-muted">{room.hotel.address}</small>
@@ -41,10 +47,10 @@ const Home3 = ({ room, index }) => {
 
                     <Row className="align-items-center justify-content-between">
                         <Col>
-                            <span className="fs-5 fw-semibold text-dark">${room.pricePerNight}</span> <small>/ night</small>
+                            <span className="fs-5 fw-semibold text-dark">${room.pricePerNight}</span> <small>/ Night</small>
                         </Col>
                         <Col xs="auto">
-                            <Button variant="outline-secondary" size="sm" className="fw-semibold">
+                            <Button variant="outline-danger" size="sm" className="fw-semibold">
                                 Book Now
                             </Button>
                         </Col>

@@ -1,40 +1,40 @@
 .news-card figure {
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-    height: 250px;
-    width: 100%;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  width: 100%;
 }
 
 .news-card img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease;
-    display: block; 
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  display: block;
 }
 
 .date-tag {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 4px 10px;
-    font-size: 13px;
-    font-weight: 500;
-    border-radius: 20px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 20px;
 }
 
 .hover-effect-1:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .hover-effect-2:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .hover-effect-3:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .effects1 {
@@ -45,12 +45,39 @@
   filter: blur(2px);
 }
 
-
-/*
-.hover-effect-3 img {
-  transition: all 0.5s ease;
+.hover14 figure {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
-.hover-effect-3:hover img {
-  filter: blur(1px);
-  transform: scale(1.05) translateY(-5px);
-} */
+
+.hover14 figure::before {
+  position: absolute;
+  top: 0;
+  left: -105%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  transition: left 0.75s ease-out;
+}
+
+.hover14 figure:hover::before {
+  animation: shine 1s ease forwards;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+
+  100% {
+    left: 125%;
+  }
+}
