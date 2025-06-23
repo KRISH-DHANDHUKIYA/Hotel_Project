@@ -19,7 +19,7 @@ const Footer = () => {
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum fugiat odit alias dicta consequatur harum labore.
                 </p>
                 <div className="d-flex justify-content-center justify-content-lg-start  
-                flex-wrap gap-2 mt-3">
+                flex-wrap gap-2 my-3">
                   <Button variant="primary" className="btn-floating" target="_blank" href="https://www.facebook.com/">
                     <i className="fab fa-facebook-f" />
                   </Button>
@@ -39,14 +39,14 @@ const Footer = () => {
               </Col>
 
               <Col xs={12} sm={6} lg={4} className="text-center text-lg-start">
-                <h6 className="font1 mb-4 fs-5">Contact Details</h6>
+                <h6 className="font1 my-3 fs-5">Contact Details</h6>
                 <p className="fontt"><i className="fa-solid fa-location-dot me-2" /> UG-1, V3 Corner, Adajan, Surat</p>
                 <p className="fontt"><i className="fa-solid fa-envelope me-2" /> info@easyskill.in</p>
                 <p className="fontt"><i className="fas fa-phone me-2" /> +91 908 154 5252</p>
               </Col>
 
               <Col xs={12} sm={6} lg={4} className="text-center text-lg-start">
-                <h6 className="mb-4 fs-5 font1">Quick Links</h6>
+                <h6 className="my-3 fs-5 font1">Quick Links</h6>
                 <Link to="/" className="text-white text-decoration-none d-block mb-2 fontt">Home</Link>
                 <Link to="/aboutus" className="text-white text-decoration-none d-block mb-2 fontt">About Us</Link>
                 <Link to="/room" className="text-white text-decoration-none d-block mb-2 fontt">Room</Link>

@@ -37,7 +37,7 @@ const Home1 = () => {
     return (
         <>
             <OwlCarousel className="owl-theme" nav={false} dots={false} responsiveClass={true} items={1} autoplay loop margin={0} autoplayTimeout={3000} responsive={{ 0: { items: 1 }, 600: { items: 1, }, 1000: { items: 1, }, }}>
-                <div className="item ">
+                <div className="item">
                     <div className="slide-wrapper">
                         <img src="https://velikorodnov.com/html/milenia/images/slide-01.jpg" alt="Slide 1" />
                         <div className="overlay" />
@@ -49,13 +49,10 @@ const Home1 = () => {
                                 onClick={() => {
                                     const section3 = document.getElementById("features333");
                                     section3?.scrollIntoView({ behavior: "smooth" });
-                                }}
-                            >
+                                }}>
                                 Discover More
                             </button>
-
                         </div>
-
                     </div>
                 </div>
 
@@ -71,12 +68,10 @@ const Home1 = () => {
                                 onClick={() => {
                                     const section3 = document.getElementById("features333");
                                     section3?.scrollIntoView({ behavior: "smooth" });
-                                }}
-                            >
+                                }}>
                                 Discover More
                             </button>
                         </div>
-
                     </div>
                 </div>
 
@@ -92,12 +87,10 @@ const Home1 = () => {
                                 onClick={() => {
                                     const section3 = document.getElementById("features333");
                                     section3?.scrollIntoView({ behavior: "smooth" });
-                                }}
-                            >
+                                }}>
                                 Discover More
                             </button>
                         </div>
-
                     </div>
                 </div>
             </OwlCarousel>

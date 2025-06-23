@@ -37,10 +37,11 @@ const NewsEvents = () => {
                 <Container>
                     <div className="text-center mb-5">
                         <h2 className="fw-bold text-dark font1">Meet Our Team</h2>
-                        <p className="text-muted mb-5 fontt" style={{ width: "600px", margin: "0 auto" }}>
+                        <p className="text-muted mb-5 fontt mx-auto" style={{ maxWidth: "90%", width: "600px" }}>
                             Our hotel thrives thanks to the passionate, friendly, and experienced professionals behind the scenes. Get to know the team who ensures your stay is unforgettable.
                         </p>
                     </div>
+
                     <Row className="gy-4">
                         <Col xs={12} sm={6} lg={3}>
                             <div className="text-center p-3 border rounded shadow-sm bg-white h-100">
