@@ -1,42 +1,35 @@
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import '../page_css/Home.css'
-import { useState } from 'react';
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import "../page_css/Home.css";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Formik } from "formik";
+import * as yup from "yup";
+
+const validationSchema = yup.object().shape({
+    destination: yup.string().required("Please select a destination."),
+    arrivalDate: yup.date().required("Please choose an arrival date.").typeError("Invalid date"),
+    departureDate: yup.date().required("Please choose a departure date.").min(yup.ref("arrivalDate"), "Departure date can’t be before arrival date").typeError("Invalid date"),
+    guests: yup.number().required("Please select number of guests.").min(1, "At least 1 guest").max(6, "Maximum 6 guests").typeError("Guests must be a number"),
+});
 
 const Home1 = () => {
-
-    const [formData, setFormData] = useState({
+    const initialValues = {
         destination: "",
         arrivalDate: "",
         departureDate: "",
         guests: "",
-    });
-
-    const [validated, setValidated] = useState(false);
-
-    const handleChange = (e) => {
-        const { id, value } = e.target;
-        setFormData((prev) => ({ ...prev, [id]: value }));
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const form = e.currentTarget;
-
-        setValidated(true);
-
-        if (form.checkValidity() === false) {
-            e.stopPropagation();
-            return
-        }
-        console.log(formData);
+    const handleSubmit = (values, { setSubmitting, resetForm }) => {
+        console.log("Form submitted:", values);
+        setSubmitting(false);
+        resetForm();
     };
 
     return (
         <>
-            <OwlCarousel className="owl-theme" nav={false} dots={false} responsiveClass={true} items={1} autoplay loop margin={0} autoplayTimeout={3000} responsive={{ 0: { items: 1 }, 600: { items: 1, }, 1000: { items: 1, }, }}>
+            <OwlCarousel className="owl-theme" nav={false} dots={false} responsiveClass={true} items={1} autoplay loop margin={0} autoplayTimeout={3000} responsive={{ 0: { items: 1 }, 600: { items: 1 }, 1000: { items: 1 } }}>
                 <div className="item">
                     <div className="slide-wrapper">
                         <img src="https://velikorodnov.com/html/milenia/images/slide-01.jpg" alt="Slide 1" />
@@ -95,141 +88,81 @@ const Home1 = () => {
                 </div>
             </OwlCarousel>
 
-            <section className="py-5 my-5 bg-dark" >
+            <section className="py-5 my-5 bg-dark">
                 <Container>
-                    <Form noValidate validated={validated} onSubmit={handleSubmit} autoComplete="off">
-                        <Row className="gy-4 gx-3">
-                            <Col xs={12} sm={6} md={3}>
-                                <Form.Group controlId="destination">
-                                    <Form.Label className="fw-bold">Destination</Form.Label>
-                                    <Form.Select value={formData.destination} onChange={handleChange} required>
-                                        <option value="">Open this select menu</option>
-                                        <option value="Dubai">Dubai</option>
-                                        <option value="Singapore">Singapore</option>
-                                        <option value="New York">New York</option>
-                                        <option value="London">London</option>
-                                    </Form.Select>
-                                    <Form.Control.Feedback type="invalid">Please select a destination.</Form.Control.Feedback>
-                                </Form.Group>
-                            </Col>
+                    <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
+                        {({ handleSubmit, handleChange, handleBlur, values, touched, errors, isSubmitting, }) => (
+                            <Form noValidate onSubmit={handleSubmit} autoComplete="off">
+                                <Row className="gy-4 gx-3">
+                                    <Col xs={12} sm={6} md={3}>
+                                        <Form.Group controlId="destination">
+                                            <Form.Label className="fw-bold">Destination</Form.Label>
+                                            <Form.Select name="destination" value={values.destination} onChange={handleChange} onBlur={handleBlur} isInvalid={touched.destination && !!errors.destination}>
+                                                <option value="">Open this select menu</option>
+                                                <option value="Dubai">Dubai</option>
+                                                <option value="Singapore">Singapore</option>
+                                                <option value="New York">New York</option>
+                                                <option value="London">London</option>
+                                            </Form.Select>
+                                            <Form.Control.Feedback type="invalid">
+                                                {errors.destination}
+                                            </Form.Control.Feedback>
+                                        </Form.Group>
+                                    </Col>
 
-                            <Col xs={12} sm={6} md={3}>
-                                <Form.Group controlId="arrivalDate">
-                                    <Form.Label className="fw-bold">Arrival Date</Form.Label>
-                                    <Form.Control type="date" value={formData.arrivalDate} onChange={handleChange} required />
-                                    <Form.Control.Feedback type="invalid">Please choose an arrival date.</Form.Control.Feedback>
-                                </Form.Group>
-                            </Col>
+                                    <Col xs={12} sm={6} md={3}>
+                                        <Form.Group controlId="arrivalDate">
+                                            <Form.Label className="fw-bold">Arrival Date</Form.Label>
+                                            <Form.Control type="date" name="arrivalDate" value={values.arrivalDate} onChange={handleChange} onBlur={handleBlur} isInvalid={touched.arrivalDate && !!errors.arrivalDate} />
+                                            <Form.Control.Feedback type="invalid">
+                                                {errors.arrivalDate}
+                                            </Form.Control.Feedback>
+                                        </Form.Group>
+                                    </Col>
 
-                            <Col xs={12} sm={6} md={3}>
-                                <Form.Group controlId="departureDate">
-                                    <Form.Label className="fw-bold">Departure Date</Form.Label>
-                                    <Form.Control type="date" value={formData.departureDate} onChange={handleChange} required />
-                                    <Form.Control.Feedback type="invalid">Please choose a departure date.</Form.Control.Feedback>
-                                </Form.Group>
-                            </Col>
+                                    <Col xs={12} sm={6} md={3}>
+                                        <Form.Group controlId="departureDate">
+                                            <Form.Label className="fw-bold">Departure Date</Form.Label>
+                                            <Form.Control type="date" name="departureDate" value={values.departureDate} onChange={handleChange} onBlur={handleBlur}
+                                                isInvalid={
+                                                    touched.departureDate && !!errors.departureDate
+                                                } />
+                                            <Form.Control.Feedback type="invalid">
+                                                {errors.departureDate}
+                                            </Form.Control.Feedback>
+                                        </Form.Group>
+                                    </Col>
 
-                            <Col xs={12} sm={6} md={2}>
-                                <Form.Group controlId="guests">
-                                    <Form.Label className="fw-bold">Guests</Form.Label>
-                                    <Form.Select value={formData.guests} onChange={handleChange} required>
-                                        <option value="">Select</option>
-                                        {[1, 2, 3, 4, 5, 6].map((num) => (
-                                            <option key={num} value={num}>
-                                                {num}
-                                            </option>
-                                        ))}
-                                    </Form.Select>
-                                    <Form.Control.Feedback type="invalid">Please select number of guests.</Form.Control.Feedback>
-                                </Form.Group>
-                            </Col>
+                                    <Col xs={12} sm={6} md={2}>
+                                        <Form.Group controlId="guests">
+                                            <Form.Label className="fw-bold">Guests</Form.Label>
+                                            <Form.Select name="guests" value={values.guests} onChange={handleChange} onBlur={handleBlur}
+                                                isInvalid={touched.guests && !!errors.guests}
+                                            >
+                                                <option value="">Select</option>
+                                                {[1, 2, 3, 4, 5, 6].map((num) => (
+                                                    <option key={num} value={num}>
+                                                        {num}
+                                                    </option>
+                                                ))}
+                                            </Form.Select>
+                                            <Form.Control.Feedback type="invalid">
+                                                {errors.guests}
+                                            </Form.Control.Feedback>
+                                        </Form.Group>
+                                    </Col>
 
-                            <Col xs={12} sm={6} md={1} className="d-grid align-self-end">
-                                <Button type="submit" style={{ backgroundColor: "#c5915e", border: "none" }} className="fw-bold">
-                                    Search
-                                </Button>
-                            </Col>
-                        </Row>
-                    </Form>
+                                    <Col xs={12} sm={6} md={1} className="d-grid align-self-end">
+                                        <Button type="submit" disabled={isSubmitting} style={{ backgroundColor: "#c5915e", border: "none" }} className="fw-bold">
+                                            Search
+                                        </Button>
+                                    </Col>
+                                </Row>
+                            </Form>
+                        )}
+                    </Formik>
                 </Container>
             </section>
-
-
-            {/* <section className="py-5 my-5 bg-dark">
-                <Container>
-                    <div className="d-flex justify-content-center">
-                        <Form className="bg-white text-muted rounded px-4 py-4 mt-4 w-100" style={{ maxWidth: '900px' }}>
-                            <Row className="gy-3 gx-3 align-items-end">
-                                <Col xs={12} md>
-                                    <Form.Group controlId="destinationInput">
-                                        <Form.Label className="d-flex align-items-center gap-2 mb-1">
-                                            <img src={assets.calenderIcon} alt="calendar" style={{ height: '1rem' }} />
-                                            Destination
-                                        </Form.Label>
-                                        <Form.Control
-                                            type="text"
-                                            list="destinations"
-                                            placeholder="Type here"
-                                            required
-                                        />
-                                        <datalist id="destinations">
-                                            {cities.map((city, index) => (
-                                                <option value={city} key={index} />
-                                            ))}
-                                        </datalist>
-                                    </Form.Group>
-                                </Col>
-
-                                <Col xs={12} sm={6} md>
-                                    <Form.Group controlId="checkIn">
-                                        <Form.Label className="d-flex align-items-center gap-2 mb-1">
-                                            <img src={assets.calenderIcon} alt="calendar" style={{ height: '1rem' }} />
-                                            Check in
-                                        </Form.Label>
-                                        <Form.Control type="date" />
-                                    </Form.Group>
-                                </Col>
-
-                                <Col xs={12} sm={6} md>
-                                    <Form.Group controlId="checkOut">
-                                        <Form.Label className="d-flex align-items-center gap-2 mb-1">
-                                            <img src={assets.calenderIcon} alt="calendar" style={{ height: '1rem' }} />
-                                            Check out
-                                        </Form.Label>
-                                        <Form.Control type="date" />
-                                    </Form.Group>
-                                </Col>
-
-                                <Col xs={6} md="auto">
-                                    <Form.Group controlId="guests">
-                                        <Form.Label>Guests</Form.Label>
-                                        <Form.Control
-                                            type="number"
-                                            min={1}
-                                            max={4}
-                                            placeholder="0"
-                                            style={{ maxWidth: '64px' }}
-                                        />
-                                    </Form.Group>
-                                </Col>
-
-                                <Col xs={12} md="auto">
-                                    <Button
-                                        type="submit"
-                                        className="d-flex align-items-center justify-content-center gap-2 bg-dark text-white border-0 w-100 w-md-auto px-4 py-2"
-                                    >
-                                        <img src={assets.searchIcon} alt="search" style={{ height: '1rem' }} />
-                                        <span>Search</span>
-                                    </Button>
-                                </Col>
-                            </Row>
-                        </Form>
-                    </div>
-                </Container>
-            </section> */}
-
-
-
         </>
     );
 };

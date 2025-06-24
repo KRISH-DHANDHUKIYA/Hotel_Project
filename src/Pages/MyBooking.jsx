@@ -35,11 +35,11 @@ const MyBooking = () => {
                                 </p>
                                 <div className="text-muted small">
                                     <div className="d-flex align-items-center mb-1">
-                                        <img src={assets.locationIcon} alt="location_icon" className="me-2" width="16" height="16" />
+                                        <img src={assets.location333} alt="location_icon" className="me-2" width="16" height="16" />
                                         <span className="fontt">{booking.hotel.address}</span>
                                     </div>
                                     <div className="d-flex align-items-center mb-1">
-                                        <img src={assets.guestsIcon} alt="guests_icon" className="me-2" width="16" height="16" />
+                                        <img src={assets.guestsicons} alt="guests_icon" className="me-2" width="16" height="16" />
                                         <span className="fontt">Guests: {booking.guests}</span>
                                     </div>
                                 </div>

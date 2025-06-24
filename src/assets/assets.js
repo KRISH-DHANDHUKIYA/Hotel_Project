@@ -55,6 +55,15 @@ import dollarsignsolid from './dollar-sign-solid.svg'
 import starfill from './star-fill.svg'
 import staroutline from './star-outline.svg'
 import location333 from './location1.svg'
+import swimmingpool from './Pool.svg'
+import mountainseen from './Mountain.svg'
+import roomes from './rooms.svg'
+import breakfastes from './breakfast.svg'
+import internetwifi from './wifi.svg'
+import guestsicons from './Guests2.svg'
+import staysafe from './safeshild.svg'
+import clean from './cleaning.svg'
+import starb from './starsolid.svg'
 
 export const assets = {
     logo,
@@ -106,8 +115,18 @@ export const assets = {
     dollarsignsolid,
     starfill,
     staroutline,
-    location333
+    location333,
+    swimmingpool,
+    mountainseen,
+    roomes,
+    breakfastes,
+    internetwifi,
+    guestsicons,
+    staysafe,
+    clean,
+    starb
 }
+export default assets;
 
 export const cities = [
     "Dubai",
@@ -136,15 +155,32 @@ export const facilityIcons = {
     "Free Breakfast": assets.freeBreakfastIcon,
     "Room Service": assets.roomServiceIcon,
     "Mountain View": assets.mountainIcon,
-    "Pool Access": assets.poolIcon,
+    "Pool Access": assets.poolIcon
+};
+
+//new 
+export const HotelFeaturesIcons = {
+    "WiFi Service": assets.internetwifi,
+    "Breakfast Included": assets.breakfastes,
+    "Guest Room Service": assets.roomes,
+    "Nature View": assets.mountainseen,
+    "Private Pool": assets.swimmingpool
 };
 
 // For Room Details Page
-export const roomCommonData = [
-    { icon: assets.homeIcon, title: "Clean & Safe Stay", description: "A well-maintained and hygienic space just for you." },
-    { icon: assets.badgeIcon, title: "Enhanced Cleaning", description: "This host follows Staybnb's strict cleaning standards." },
-    { icon: assets.locationFilledIcon, title: "Excellent Location", description: "90% of guests rated the location 5 stars." },
-    { icon: assets.heartIcon, title: "Smooth Check-In", description: "100% of guests gave check-in a 5-star rating." },
+// export const roomCommonData = [
+//     { icon: assets.homeIcon, title: "Clean & Safe Stay", description: "A well-maintained and hygienic space just for you." },
+//     { icon: assets.badgeIcon, title: "Enhanced Cleaning", description: "This host follows Staybnb's strict cleaning standards." },
+//     { icon: assets.locationFilledIcon, title: "Excellent Location", description: "90% of guests rated the location 5 stars." },
+//     { icon: assets.heartIcon, title: "Smooth Check-In", description: "100% of guests gave check-in a 5-star rating." },
+// ];
+
+//new :
+export const roomInfoItems = [
+    { icon: assets.staysafe, title: "Clean & Safe Stay", description: "A well-maintained and hygienic space just for you." },
+    { icon: assets.clean, title: "Enhanced Cleaning", description: "This host follows Staybnb's strict cleaning standards." },
+    { icon: assets.location333, title: "Excellent Location", description: "90% of guests rated the location 5 stars." },
+    { icon: assets.starb, title: "Smooth Check-In", description: "100% of guests gave check-in a 5-star rating." },
 ];
 
 // User Dummy Data
@@ -176,13 +212,65 @@ export const hotelDummyData = {
 }
 
 // Rooms Dummy Data
+// export const roomsDummyData = [
+//     {
+//         "_id": "67f7647c197ac559e4089b96",
+//         "hotel": hotelDummyData,
+//         "roomType": "Double Bed",
+//         "pricePerNight": 399,
+//         "amenities": ["Room Service", "Mountain View", "Pool Access"],
+//         // "images": [image1,image2,image3,image4],
+//         "images": [roomImg1, roomImg2, roomImg3, roomImg4],
+//         "isAvailable": true,
+//         "createdAt": "2025-04-10T06:26:04.013Z",
+//         "updatedAt": "2025-04-10T06:26:04.013Z",
+//         "__v": 0
+//     },
+//     {
+//         "_id": "67f76452197ac559e4089b8e",
+//         "hotel": hotelDummyData,
+//         "roomType": "Double Bed",
+//         "pricePerNight": 299,
+//         "amenities": ["Room Service", "Mountain View", "Pool Access"],
+//         "images": [roomImg2, roomImg3, roomImg4, roomImg1],
+//         "isAvailable": true,
+//         "createdAt": "2025-04-10T06:25:22.593Z",
+//         "updatedAt": "2025-04-10T06:25:22.593Z",
+//         "__v": 0
+//     },
+//     {
+//         "_id": "67f76406197ac559e4089b82",
+//         "hotel": hotelDummyData,
+//         "roomType": "Double Bed",
+//         "pricePerNight": 249,
+//         "amenities": ["Free WiFi", "Free Breakfast", "Room Service"],
+//         "images": [roomImg3, roomImg4, roomImg1, roomImg2],
+//         "isAvailable": true,
+//         "createdAt": "2025-04-10T06:24:06.285Z",
+//         "updatedAt": "2025-04-10T06:24:06.285Z",
+//         "__v": 0
+//     },
+//     {
+//         "_id": "67f763d8197ac559e4089b7a",
+//         "hotel": hotelDummyData,
+//         "roomType": "Single Bed",
+//         "pricePerNight": 199,
+//         "amenities": ["Free WiFi", "Room Service", "Pool Access"],
+//         "images": [roomImg4, roomImg1, roomImg2, roomImg3],
+//         "isAvailable": true,
+//         "createdAt": "2025-04-10T06:23:20.252Z",
+//         "updatedAt": "2025-04-10T06:23:20.252Z",
+//         "__v": 0
+//     }
+// ]
+
 export const roomsDummyData = [
     {
         "_id": "67f7647c197ac559e4089b96",
         "hotel": hotelDummyData,
         "roomType": "Double Bed",
         "pricePerNight": 399,
-        "amenities": ["Room Service", "Mountain View", "Pool Access"],
+        "amenities": ["Guest Room Service", "Nature View", "Private Pool"],
         // "images": [image1,image2,image3,image4],
         "images": [roomImg1, roomImg2, roomImg3, roomImg4],
         "isAvailable": true,
@@ -195,7 +283,7 @@ export const roomsDummyData = [
         "hotel": hotelDummyData,
         "roomType": "Double Bed",
         "pricePerNight": 299,
-        "amenities": ["Room Service", "Mountain View", "Pool Access"],
+        "amenities": ["Guest Room Service", "Nature View", "Private Pool"],
         "images": [roomImg2, roomImg3, roomImg4, roomImg1],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:25:22.593Z",
@@ -207,7 +295,7 @@ export const roomsDummyData = [
         "hotel": hotelDummyData,
         "roomType": "Double Bed",
         "pricePerNight": 249,
-        "amenities": ["Free WiFi", "Free Breakfast", "Room Service"],
+        "amenities": ["WiFi Service", "Breakfast Included", "Guest Room Service"],
         "images": [roomImg3, roomImg4, roomImg1, roomImg2],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:24:06.285Z",
@@ -219,7 +307,7 @@ export const roomsDummyData = [
         "hotel": hotelDummyData,
         "roomType": "Single Bed",
         "pricePerNight": 199,
-        "amenities": ["Free WiFi", "Room Service", "Pool Access"],
+        "amenities": ["WiFi Service", "Guest Room Service", "Private Pool"],
         "images": [roomImg4, roomImg1, roomImg2, roomImg3],
         "isAvailable": true,
         "createdAt": "2025-04-10T06:23:20.252Z",
@@ -227,6 +315,7 @@ export const roomsDummyData = [
         "__v": 0
     }
 ]
+
 
 
 

@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { assets, facilityIcons, roomsDummyData } from "../assets/assets";
+// import { assets, HotelFeaturesIcons, roomsDummyData } from "../assets/assets";
+import { assets, roomsDummyData } from "../assets/assets";
+import { HotelFeaturesIcons } from "../assets/assets";
 import { Link } from "react-router-dom";
 import { Collapse, Button } from 'react-bootstrap';
 
@@ -94,7 +96,7 @@ const Room1 = () => {
                                 <div className="d-flex flex-wrap align-items-center mt-3 mb-4 gap-3">
                                     {room.amenities.map((item, index) => (
                                         <div key={index} className="d-flex align-items-center gap-2 px-3 py-2 rounded" style={{ backgroundColor: 'rgba(245, 245, 255, 0.7)' }}>
-                                            <img key={index} src={facilityIcons[item]} title={item} style={{ width: '20px', height: '20px' }} />
+                                            <img key={index} src={HotelFeaturesIcons[item]} title={item} style={{ width: '20px', height: '20px' }} />
                                             <p className="small mb-0 fontt">{item}</p>
                                         </div>
                                     ))}
